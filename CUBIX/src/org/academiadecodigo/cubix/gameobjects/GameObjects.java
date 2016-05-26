@@ -10,6 +10,7 @@ public class GameObjects {
     private Position pos;
     private boolean isVisible; // default >> false
 
+
     public GameObjects(){
 
         isVisible = true; // all the cubes are visible

@@ -38,4 +38,9 @@ public class CubeSgfx implements RepresentableCube {
         this.row = row;
         pic.load("TEMPLATES/Board_Cubes/" + this.row + "/" + "(" + (this.col + 1) + ")" + ".png");
     }
+
+    @Override
+    public void delete() {
+        pic.delete();
+    }
 }

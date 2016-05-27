@@ -1,5 +1,6 @@
 package org.academiadecodigo.cubix;
 
+import org.academiadecodigo.cubix.gameobjects.GameObjectFactory;
 import org.academiadecodigo.cubix.gameobjects.GameObjects;
 import org.academiadecodigo.cubix.gameobjects.GameObjectsLines;
 import org.academiadecodigo.cubix.player.Ball;
@@ -18,6 +19,7 @@ public class Game {
     private RepresentableBall simpleGraphicsBall;
     private Maze maze;
     private Ball ball;
+    private GameObjectFactory factory;
 
     public Game(){
 
@@ -27,6 +29,7 @@ public class Game {
         ball = new Ball();
         simpleGraphicsBall = new BallSgfx(ball.getPos().getCol(),ball.getPos().getRow());
 
+        factory = new GameObjectFactory();
         // initBall();
 
     }
@@ -58,14 +61,19 @@ public class Game {
 
     public void create(){
         for(int i = 0; i < 1; i++){
-            gameObjects[i] = new GameObjectsLines();
-            gameObjects[i].createCube();
+            gameObjects[i] = factory.createGameObject();
         }
     }
 
     public void moveLine(){
         for(int i = 0; i < 1; i++){
-            gameObjects[i].move();
+            if(gameObjects[i].getPos().getRow() < gameObjects.length - 1) {
+                gameObjects[i].move();
+            } else {
+                gameObjects[i].deleteLine();
+                gameObjects[i] = factory.createGameObject();
+            }
+
         }
     }
 

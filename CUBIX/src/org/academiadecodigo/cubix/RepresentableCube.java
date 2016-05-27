@@ -12,4 +12,7 @@ public interface RepresentableCube {
     void init();
 
     void load(int col, int row);
+
+    void delete();
+
 }

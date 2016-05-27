@@ -32,6 +32,10 @@ public class GameObjects {
         simpleGraphicsCube.load(getPos().getCol(),getPos().getRow());
     }
 
+    public void deleteCube(){
+        simpleGraphicsCube.delete();
+    }
+
     // GETTERS && SETTERS
 
     public Position getPos() {

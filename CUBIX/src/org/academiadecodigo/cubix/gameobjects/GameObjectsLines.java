@@ -10,8 +10,6 @@ public class GameObjectsLines {
     private GameObjects[] gameObjectsLines;
     private Position pos; // this pos is related to the line of the cubes
 
-    //private RepresentableCube simpleGraphicsCube;
-
     public GameObjectsLines(){
 
         gameObjectsLines = new GameObjects[8];
@@ -19,22 +17,8 @@ public class GameObjectsLines {
 
     }
 
-    public void createCube(){
-
-        // main loop para cada indice do array, meter um cubo
-        // fazer set à coluna dos cubos, sendo o mesmo indice do loop
-
-        for(int i = 0; i < gameObjectsLines.length; i++){
-            gameObjectsLines[i] = new Cube(i);
-
-            //simpleGraphicsCube = new CubeSgfx(gameObjectsLines[i].getPos().getCol(),gameObjectsLines[i].getPos().getRow());
-            //simpleGraphicsCube.init();
-
-            System.out.println(gameObjectsLines[i].getPos().getCol() + " " + gameObjectsLines[i].getPos().getRow());
-        }
-
-        // metodo abrirBuracos();
-
+    public void setGameObjectsLines(GameObjects[] gameObjectsLines) {
+        this.gameObjectsLines = gameObjectsLines;
     }
 
     public void move(){
@@ -42,7 +26,20 @@ public class GameObjectsLines {
 
         for(int i = 0; i < gameObjectsLines.length; i++){
             gameObjectsLines[i].move();
-            //simpleGraphicsCube.load(gameObjectsLines[i].getPos().getCol(),gameObjectsLines[i].getPos().getRow());
+
+            System.out.println(gameObjectsLines[i].getPos().getCol() + " " + gameObjectsLines[i].getPos().getRow());
+        }
+
+    }
+
+    public Position getPos() {
+        return pos;
+    }
+
+    public void deleteLine(){
+
+        for(int i = 0; i < gameObjectsLines.length; i++){
+            gameObjectsLines[i].deleteCube();
         }
     }
 

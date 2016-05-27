@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+            <state relative-caret-position="598">
+              <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -52,15 +52,27 @@
       <file leaf-file-name="CubeSgfx.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/simplegfx/CubeSgfx.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="645">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#460#461#0" expanded="true" />
                 <element signature="e#486#487#0" expanded="true" />
                 <element signature="e#527#528#0" expanded="true" />
                 <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepresentableCube.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,10 +90,12 @@
       <file leaf-file-name="GameObjects.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#933#934#0" expanded="true" />
+                <element signature="e#976#977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,9 +104,25 @@
       <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameObjectFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+              <folding>
+                <element signature="e#1173#1174#0" expanded="true" />
+                <element signature="e#1209#1210#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,42 +130,27 @@
       <file leaf-file-name="GameObjectsLines.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectsLines.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+            <state relative-caret-position="615">
+              <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
               <folding>
-                <element signature="e#178#179#0" expanded="true" />
-                <element signature="e#204#205#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#982#983#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepresentableCube.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java">
+      <file leaf-file-name="Cube.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RepresentableBall.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableBall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#178#179#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,6 +161,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,16 +181,17 @@
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/player/Ball.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/simplegfx/BallSgfx.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/simplegfx/MazeSgfx.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/Position.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableBall.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectsFactory.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableMaze.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/Position.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectFactory.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/simplegfx/CubeSgfx.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/Game.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjects.java" />
         <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectsLines.java" />
-        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java" />
+        <option value="$PROJECT_DIR$/src/org/academiadecodigo/cubix/Game.java" />
       </list>
     </option>
   </component>
@@ -356,8 +373,8 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v4.4.1/bin/node" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -804,12 +821,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464166494319</updated>
-      <workItem from="1464166497862" duration="18335000" />
+      <workItem from="1464166497862" duration="25658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18335000" />
+    <option name="totallyTimeSpent" value="25658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -823,7 +840,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14653465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09009901" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -894,154 +911,6 @@
         <state relative-caret-position="75">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/org.academiadecodigo.cubix">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.academiadecodigo.cubix</OriginalElement>
-          <nodes>
-            <node x="553.0" y="478.5">org.academiadecodigo.cubix.simplegfx.BallSgfx</node>
-            <node x="297.0" y="289.0">org.academiadecodigo.cubix.gameobjects.Hitable</node>
-            <node x="0.0" y="222.0">org.academiadecodigo.cubix.gameobjects.GameObjects</node>
-            <node x="655.0" y="467.5">org.academiadecodigo.cubix.Maze</node>
-            <node x="0.0" y="1189.0">org.academiadecodigo.cubix.gameobjects.GameObjectsTypes</node>
-            <node x="844.0" y="478.5">org.academiadecodigo.cubix.simplegfx.MazeSgfx</node>
-            <node x="112.79197530864201" y="591.0">org.academiadecodigo.cubix.gameobjects.GameObjectsFactory</node>
-            <node x="89.29999999999995" y="770.0">org.academiadecodigo.cubix.Game</node>
-            <node x="570.2919753086419" y="256.0">org.academiadecodigo.cubix.RepresentableMaze</node>
-            <node x="250.99999999999997" y="467.5">org.academiadecodigo.cubix.gameobjects.Cube</node>
-            <node x="166.29999999999995" y="1093.0">org.academiadecodigo.cubix.Main</node>
-            <node x="956.0" y="445.0">org.academiadecodigo.cubix.player.Ball</node>
-            <node x="441.0" y="478.5">org.academiadecodigo.cubix.simplegfx.CubeSgfx</node>
-            <node x="224.04197530864195" y="0.0">org.academiadecodigo.cubix.Position</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="org.academiadecodigo.cubix.Game" target="org.academiadecodigo.cubix.gameobjects.GameObjects">
-              <point x="-80.25" y="-136.5" />
-              <point x="169.54999999999995" y="740.0" />
-              <point x="69.04999999999995" y="740.0" />
-              <point x="-46.0" y="81.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.Game" target="org.academiadecodigo.cubix.Maze">
-              <point x="80.25" y="-136.5" />
-              <point x="330.04999999999995" y="740.0" />
-              <point x="739.5" y="740.0" />
-              <point x="0.0" y="25.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.player.Ball" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="-56.66666666666663" y="-48.0" />
-              <point x="984.3333333333334" y="405.0" />
-              <point x="718.7919753086419" y="405.0" />
-              <point x="67.5" y="47.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.Cube" target="org.academiadecodigo.cubix.gameobjects.Hitable">
-              <point x="0.0" y="-25.5" />
-              <point x="0.0" y="14.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.Cube" target="org.academiadecodigo.cubix.gameobjects.GameObjects">
-              <point x="-56.33333333333334" y="-25.5" />
-              <point x="279.16666666666663" y="425.0" />
-              <point x="207.0" y="425.0" />
-              <point x="92.0" y="81.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.Maze" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="0.0" y="-25.5" />
-              <point x="739.5" y="425.0" />
-              <point x="664.7919753086419" y="425.0" />
-              <point x="13.5" y="47.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.GameObjectsFactory" target="org.academiadecodigo.cubix.gameobjects.Cube">
-              <point x="57.799999999999955" y="-59.5" />
-              <point x="315.09197530864196" y="571.0" />
-              <point x="335.5" y="571.0" />
-              <point x="0.0" y="25.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.GameObjectsFactory" target="org.academiadecodigo.cubix.gameobjects.GameObjects">
-              <point x="-115.60000000000002" y="-59.5" />
-              <point x="141.691975308642" y="571.0" />
-              <point x="106.79999999999995" y="571.0" />
-              <point x="106.79999999999995" y="425.0" />
-              <point x="115.0" y="425.0" />
-              <point x="0.0" y="81.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.GameObjects" target="org.academiadecodigo.cubix.Position">
-              <point x="57.5" y="-81.5" />
-              <point x="172.5" y="192.0" />
-              <point x="272.04197530864195" y="192.0" />
-              <point x="-48.0" y="81.0" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.GameObjectsFactory" target="org.academiadecodigo.cubix.Position">
-              <point x="115.59999999999991" y="-59.5" />
-              <point x="372.8919753086419" y="571.0" />
-              <point x="430.5" y="571.0" />
-              <point x="430.5" y="202.0" />
-              <point x="336.04197530864195" y="202.0" />
-              <point x="16.0" y="81.0" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.gameobjects.Cube" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="56.33333333333334" y="-25.5" />
-              <point x="391.8333333333333" y="405.0" />
-              <point x="583.7919753086419" y="405.0" />
-              <point x="-67.5" y="47.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.Game" target="org.academiadecodigo.cubix.player.Ball">
-              <point x="133.75" y="-136.5" />
-              <point x="383.54999999999995" y="750.0" />
-              <point x="1041.0" y="750.0" />
-              <point x="0.0" y="48.0" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.simplegfx.CubeSgfx" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="0.0" y="-14.5" />
-              <point x="487.0" y="415.0" />
-              <point x="610.7919753086419" y="415.0" />
-              <point x="-40.5" y="47.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.player.Ball" target="org.academiadecodigo.cubix.Position">
-              <point x="0.0" y="-48.0" />
-              <point x="1041.0" y="425.0" />
-              <point x="1048.3753086419752" y="425.0" />
-              <point x="1048.3753086419752" y="192.0" />
-              <point x="368.04197530864195" y="192.0" />
-              <point x="48.0" y="81.0" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.Game" target="org.academiadecodigo.cubix.gameobjects.GameObjectsFactory">
-              <point x="-26.75" y="-136.5" />
-              <point x="223.04999999999995" y="750.0" />
-              <point x="185.041975308642" y="750.0" />
-              <point x="-72.25" y="59.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.simplegfx.BallSgfx" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="0.0" y="-14.5" />
-              <point x="594.0" y="425.0" />
-              <point x="637.7919753086419" y="425.0" />
-              <point x="-13.5" y="47.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.Main" target="org.academiadecodigo.cubix.Game">
-              <point x="0.0" y="-25.5" />
-              <point x="0.0" y="136.5" />
-            </edge>
-            <edge source="org.academiadecodigo.cubix.simplegfx.MazeSgfx" target="org.academiadecodigo.cubix.RepresentableMaze">
-              <point x="0.0" y="-14.5" />
-              <point x="890.0" y="415.0" />
-              <point x="691.7919753086419" y="415.0" />
-              <point x="40.5" y="47.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="106.0" y="357.0" />
-          <SelectedNodes>
-            <node>org.academiadecodigo.cubix.RepresentableMaze</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1128,11 +997,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableMaze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="1300" column="0" selection-start-line="1300" selection-start-column="0" selection-end-line="1300" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.academiadecodigo.cubix">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.academiadecodigo.cubix</OriginalElement>
+          <nodes>
+            <node x="" y="">org.academiadecodigo.cubix.simplegfx.BallSgfx</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.Hitable</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.GameObjects</node>
+            <node x="" y="">org.academiadecodigo.cubix.RepresentableCube</node>
+            <node x="" y="">org.academiadecodigo.cubix.Maze</node>
+            <node x="" y="">org.academiadecodigo.cubix.RepresentableMaze</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.GameObjectFactory</node>
+            <node x="" y="">org.academiadecodigo.cubix.RepresentableBall</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.GameObjectsTypes</node>
+            <node x="" y="">org.academiadecodigo.cubix.simplegfx.MazeSgfx</node>
+            <node x="" y="">org.academiadecodigo.cubix.Game</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.GameObjectsLines</node>
+            <node x="" y="">org.academiadecodigo.cubix.gameobjects.Cube</node>
+            <node x="" y="">org.academiadecodigo.cubix.Main</node>
+            <node x="" y="">org.academiadecodigo.cubix.simplegfx.CubeSgfx</node>
+            <node x="" y="">org.academiadecodigo.cubix.player.Ball</node>
+            <node x="" y="">org.academiadecodigo.cubix.Position</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="352.5" y="318.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="e#1173#1174#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1150,70 +1094,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableMaze.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/RepresentableCube.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+        <state relative-caret-position="225">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/simplegfx/CubeSgfx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="645">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#460#461#0" expanded="true" />
             <element signature="e#486#487#0" expanded="true" />
             <element signature="e#527#528#0" expanded="true" />
             <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectsLines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="525">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
+            <element signature="e#976#977#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/Cube.java">
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/gameobjects/GameObjectsLines.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+        <state relative-caret-position="615">
+          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
           <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/academiadecodigo/cubix/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="72" column="44" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

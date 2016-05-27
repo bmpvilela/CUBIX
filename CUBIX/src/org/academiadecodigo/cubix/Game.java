@@ -1,8 +1,7 @@
 package org.academiadecodigo.cubix;
 
-import org.academiadecodigo.cubix.gameobjects.Cube;
 import org.academiadecodigo.cubix.gameobjects.GameObjects;
-import org.academiadecodigo.cubix.gameobjects.GameObjectsFactory;
+import org.academiadecodigo.cubix.gameobjects.GameObjectsLines;
 import org.academiadecodigo.cubix.player.Ball;
 import org.academiadecodigo.cubix.simplegfx.BallSgfx;
 import org.academiadecodigo.cubix.simplegfx.MazeSgfx;
@@ -12,8 +11,7 @@ import org.academiadecodigo.cubix.simplegfx.MazeSgfx;
  */
 public class Game {
 
-    public final GameObjects[][] gameLines = new GameObjects[14][]; // TODO array
-    private GameObjectsFactory factory;
+    public GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
     private int delay = 200;
     private boolean gameLoop;
     private RepresentableMaze simpleGraphicsMaze;
@@ -22,8 +20,6 @@ public class Game {
     private Ball ball;
 
     public Game(){
-
-        factory = new GameObjectsFactory();
 
         maze = new Maze();
         simpleGraphicsMaze = new MazeSgfx(maze.getPos().getCol(),maze.getPos().getRow());
@@ -53,6 +49,7 @@ public class Game {
             }
 
             // move
+            moveLine();
 
         }
 
@@ -60,17 +57,19 @@ public class Game {
     }
 
     public void create(){
-        for(int i = 0; i < gameLines.length; i++){
-            gameLines[0] = factory.createCube();
+        for(int i = 0; i < 1; i++){
+            gameObjects[i] = new GameObjectsLines();
+            gameObjects[i].createCube();
         }
     }
 
-    public void move(){
-        // vai mover as nossas cubeLines
+    public void moveLine(){
+        for(int i = 0; i < 1; i++){
+            gameObjects[i].move();
+        }
     }
 
     public void crash(){
         // to make a new class
     }
-
 }

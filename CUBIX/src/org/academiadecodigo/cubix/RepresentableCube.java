@@ -10,4 +10,6 @@ public interface RepresentableCube {
     int getRow();
 
     void init();
+
+    void load(int col, int row);
 }

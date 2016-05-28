@@ -43,7 +43,6 @@ public class GameObjectFactory {
 
         int numberOfSpacesMin, numberOfSpacesMax;
         int totalNumberSpaces;
-        gameLevel = 5;     //TODO Clear
 
         switch (gameLevel){
 

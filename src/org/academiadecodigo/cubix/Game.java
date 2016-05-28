@@ -6,6 +6,7 @@ import org.academiadecodigo.cubix.gameobjects.GameObjectsLines;
 import org.academiadecodigo.cubix.player.Ball;
 import org.academiadecodigo.cubix.simplegfx.BallSgfx;
 import org.academiadecodigo.cubix.simplegfx.MazeSgfx;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 /**
  * Created by codecadet on 23/05/16.
@@ -43,13 +44,14 @@ public class Game {
         create();
 
         while (!gameLoop) { // gameLoop a negar propriedade default da gameLoop
+            int trigger;
 
             // pause for a while:
             Thread.sleep(delay);
 
-            //create
-            //create();
-            if(gameObjects[0].getPos().getRow()==7)create();
+            //create line
+            trigger = gameObjects.length/gameLevel;
+            if(gameObjects[0].getPos().getRow()%trigger==0 && gameObjects[0].getPos().getRow()!=0)create();
 
             // move
             moveLine();
@@ -61,7 +63,10 @@ public class Game {
 
     public void create(){
 
-        if (linesCounter < gameObjects.length-1) {
+        System.out.println("LINES:" + linesCounter);
+
+        if (linesCounter < gameObjects.length/2){
+                //gameObjects.length-1) {
             gameObjects[linesCounter] = factory.createGameObject(gameLevel);
             linesCounter++;
         }
@@ -69,16 +74,15 @@ public class Game {
     }
 
     public void moveLine(){
+
         for(int i = 0; i < linesCounter; i++){
-            System.out.println(linesCounter);
-            //if(gameObjects[i] != null) {
-                if (gameObjects[i].getPos().getRow() < gameObjects.length - 1) {
-                    gameObjects[i].move();
-                } else {
-                    gameObjects[i].deleteLine();
-                    gameObjects[i] = factory.createGameObject(gameLevel); //TODO pass gameLevel for move. dont make sense
-                }
-            //}
+
+            if (gameObjects[i].getPos().getRow() < gameObjects.length - 1) {
+                gameObjects[i].move();
+            } else {
+                gameObjects[i].deleteLine();
+                gameObjects[i] = factory.createGameObject(gameLevel); //TODO pass gameLevel for move. dont make sense
+            }
 
         }
     }

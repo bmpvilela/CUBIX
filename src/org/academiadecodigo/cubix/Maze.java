@@ -20,7 +20,5 @@ public class Maze {
         return repr;
     }
 
-    public Position getPos() {
-        return pos;
-    }
+    public Position getPos() { return pos; }
 }

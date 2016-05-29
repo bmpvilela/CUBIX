@@ -13,7 +13,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
  */
 public class Game {
 
-    public GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
+    private GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
     private final int delay = 200; //TODO add two counters for different delays (lines and ball)
     private boolean gameLoop;
     private RepresentableMaze simpleGraphicsMaze;
@@ -21,7 +21,7 @@ public class Game {
     private Maze maze;
     private Ball ball;
     private GameObjectFactory factory;
-    private int gameLevel = 1;
+    private int gameLevel = 3;
     private int linesCounter;
 
     public Game(){
@@ -39,17 +39,25 @@ public class Game {
 
     public void startGame() throws InterruptedException {
 
+        int trigger;
         simpleGraphicsMaze.init();
         simpleGraphicsBall.init();
         create();
 
         while (!gameLoop) { // gameLoop a negar propriedade default da gameLoop
-            int trigger;
 
             // pause for a while:
             Thread.sleep(delay);
 
-            //create line
+            //create line //TODO Define a max level (maybe 7)
+            /**
+             * The trigger position is the board length divided by the game level
+             * ex: level 1 trigger is 14 (14/1). New line appears when the cube line arrives the last line (14)
+             *     level 2 trigger is 7 (17/2). New line appears when the cube line arrives the line 7 and 14.
+             *     (...)
+             * So, if the module of the line position with trigger is 0 we create a new line.
+             * The trigger defines the delta between each new line.
+             */
             trigger = gameObjects.length/gameLevel;
             if(gameObjects[0].getPos().getRow()%trigger==0 && gameObjects[0].getPos().getRow()!=0)create();
 
@@ -63,10 +71,11 @@ public class Game {
 
     public void create(){
 
-        System.out.println("LINES:" + linesCounter);
-
+        /**
+         * create a max of 7 lines (board lenght/2).
+         * This gives a board fill with a line with cubes fallowed by a clean line
+         */
         if (linesCounter < gameObjects.length/2){
-                //gameObjects.length-1) {
             gameObjects[linesCounter] = factory.createGameObject(gameLevel);
             linesCounter++;
         }

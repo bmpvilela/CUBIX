@@ -27,11 +27,8 @@ public class GameObjectFactory {
 
         for (int i = 0; i < arrayOfCubes.length; i++) {
             arrayOfCubes[i] = createCube(i); //Calls the createCube and return a object to put in that position
-
-            //System.out.println(arrayOfCubes[i].getPos().getCol() + " " + arrayOfCubes[i].getPos().getRow());
         }
 
-        //arrayOfCubes[5].setVisible(false);
         openSpaces(arrayOfCubes, gameLevel);
 
         initCubeLine(arrayOfCubes);
@@ -44,6 +41,13 @@ public class GameObjectFactory {
         int numberOfSpacesMin, numberOfSpacesMax;
         int totalNumberSpaces;
 
+        int arrayPos;
+        int count = 0;
+
+        /**
+         * This switch defines the minimum and maximum wholes in the cube line.
+         * This number depends from the game level.
+         */
         switch (gameLevel){
 
             case 1:
@@ -68,38 +72,44 @@ public class GameObjectFactory {
                 break;
         }
 
+        /**
+         * A random value between min and max
+         */
         totalNumberSpaces = numberOfSpacesMin + (int)(Math.random() * ((numberOfSpacesMax - numberOfSpacesMin)+1));
 
-        int arrayPos;
-        int count = 0;
 
+        /**
+         * Create the wholes and verify if they are created in a already clean position or they are contiguos.
+         * If so, get a new position.
+         */
         while(count != totalNumberSpaces){
+
             arrayPos  = (int) (Math.random() * arrayOfCubes.length);
+            System.out.println(arrayPos);
 
-            /*
-            if(arrayPos > 0 && arrayPos < arrayOfCubes.length){
-
+            switch (arrayPos){
+                case 0:
+                    if (arrayOfCubes[arrayPos].isVisible() && arrayOfCubes[arrayPos+1].isVisible())
+                    {
+                        arrayOfCubes[arrayPos].setVisible(false);
+                        count++;
+                        break;
+                    }
+                case 7: //TODO array.length not allowed
+                    if (arrayOfCubes[arrayPos].isVisible() && arrayOfCubes[arrayPos-1].isVisible())
+                    {
+                        arrayOfCubes[arrayPos].setVisible(false);
+                        count++;
+                        break;
+                    }
+                default:
+                    if (arrayOfCubes[arrayPos-1].isVisible() && arrayOfCubes[arrayPos].isVisible() && arrayOfCubes[arrayPos+1].isVisible())
+                    {
+                        arrayOfCubes[arrayPos].setVisible(false);
+                        count++;
+                        break;
+                    }
             }
-
-            if(arrayPos == 0){
-                if (!arrayOfCubes[arrayPos+1].isVisible());
-            }
-
-            if(arrayPos == arrayOfCubes.length-1){
-                arrayOfCubes[arrayPos-1];//compare
-            }
-
-            if(//compare in the midle
-                    ){
-
-            }
-            */
-
-            if(arrayOfCubes[arrayPos].isVisible()){
-                arrayOfCubes[arrayPos].setVisible(false);
-                count++;
-            }
-
         }
     }
 

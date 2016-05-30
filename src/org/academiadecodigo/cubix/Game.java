@@ -14,7 +14,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 public class Game {
 
     private GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
-    private final int delay = 200; //TODO add two counters for different delays (lines and ball)
+    private final int delay = 20; //TODO add two counters for different delays (lines and ball)
     private boolean gameLoop;
 
     private RepresentableMaze simpleGraphicsMaze;
@@ -25,7 +25,7 @@ public class Game {
 
     private GameObjectFactory factory;
     private int gameLevel = 7;
-    private int linesCounter;
+    private int linesCounter = 1;
     private int trigger = gameObjects.length/gameLevel;
 
     public Game(){
@@ -44,8 +44,8 @@ public class Game {
 
         simpleGraphicsMaze.init();
         simpleGraphicsBall.init();
+
         gameObjects[0] = factory.createGameObject(gameLevel);
-        linesCounter++;
 
         while (!gameLoop) { // gameLoop a negar propriedade default da gameLoop
 
@@ -67,10 +67,7 @@ public class Game {
 
             // move
             moveLine();
-
         }
-
-
     }
 
     public void create(){

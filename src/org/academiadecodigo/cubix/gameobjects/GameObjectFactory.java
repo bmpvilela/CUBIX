@@ -11,9 +11,7 @@ public class GameObjectFactory {
     public static GameObjectsLines createGameObject(int gameLevel){
 
         GameObjectsLines gameObjectLine = new GameObjectsLines();
-
         gameObjectLine.setGameObjectsLines(createCubeLine(gameLevel)); //cria me um gameobject line e coloca dentro dela um array de cubos
-
         return gameObjectLine; // return game object
 
     }
@@ -30,7 +28,6 @@ public class GameObjectFactory {
         }
 
         openSpaces(arrayOfCubes, gameLevel);
-
         initCubeLine(arrayOfCubes);
 
         return arrayOfCubes; // return the cubes arrayOfCubes
@@ -84,7 +81,6 @@ public class GameObjectFactory {
         while(count != totalNumberSpaces){
 
             arrayPos  = (int) (Math.random() * arrayOfCubes.length);
-            System.out.println(arrayPos);
 
             switch (arrayPos){
                 case 0:
@@ -93,7 +89,6 @@ public class GameObjectFactory {
                         arrayOfCubes[arrayPos].setVisible(false);
                         count++;
                     }
-                    System.out.println("0");
                     break;
 
                 case 1:

@@ -15,8 +15,8 @@ public class Ball{
     public Ball(){
 
         pos = new Position();
-        pos.setCol(3);
-        pos.setRow(7);
+        pos.setCol(4);
+        pos.setRow(13);
 
     }
 

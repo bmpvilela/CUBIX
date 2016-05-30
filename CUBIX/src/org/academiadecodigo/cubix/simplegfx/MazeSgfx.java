@@ -27,7 +27,7 @@ public class MazeSgfx implements RepresentableMaze {
 
     @Override
     public void init() {
-        Picture pic = new Picture("TEMPLATES/Board_Cubes/Board.png");
+        Picture pic = new Picture("TEMPLATES/Board.png");
         pic.draw();
     }
 }

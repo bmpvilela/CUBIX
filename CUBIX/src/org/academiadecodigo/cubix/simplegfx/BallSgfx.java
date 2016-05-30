@@ -27,7 +27,7 @@ public class BallSgfx implements RepresentableBall {
 
     @Override
     public void init() {
-        Picture pic = new Picture("TEMPLATES/Board_Cubes/Ball.png");
+        Picture pic = new Picture("TEMPLATES/Ball/" + col + ".png");
         pic.draw();
     }
 }

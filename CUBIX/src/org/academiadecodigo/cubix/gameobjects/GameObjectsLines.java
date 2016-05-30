@@ -27,7 +27,7 @@ public class GameObjectsLines {
         for(int i = 0; i < gameObjectsLines.length; i++){
             gameObjectsLines[i].move();
 
-            System.out.println(gameObjectsLines[i].getPos().getCol() + " " + gameObjectsLines[i].getPos().getRow());
+            //System.out.println(gameObjectsLines[i].getPos().getCol() + " " + gameObjectsLines[i].getPos().getRow());
         }
 
     }

@@ -6,7 +6,10 @@ package org.academiadecodigo.cubix.gameobjects;
 
 public class Cube extends GameObjects implements Hitable{
 
+    //TODO Check if hide propertie could be here
+
     public Cube(int col){
         super(col);
     }
+
 }

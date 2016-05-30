@@ -23,17 +23,22 @@ public class GameObjects {
         pos.setCol(col);
 
         simpleGraphicsCube = new CubeSgfx(getPos().getCol(),getPos().getRow());
-        simpleGraphicsCube.init();
 
+    }
+
+    public void init(){
+        simpleGraphicsCube.init();
     }
 
     public void move(){
         pos.setRow(pos.getRow()+1);
-        simpleGraphicsCube.load(getPos().getCol(),getPos().getRow());
+        if (isVisible) {
+            simpleGraphicsCube.load(getPos().getCol(), getPos().getRow());
+        }
     }
 
     public void deleteCube(){
-        simpleGraphicsCube.delete();
+        if (isVisible()) simpleGraphicsCube.delete();
     }
 
     // GETTERS && SETTERS
@@ -49,7 +54,6 @@ public class GameObjects {
     public void setVisible(boolean visible) {
         isVisible = visible;
     }
-
 
 
 }

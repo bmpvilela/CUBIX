@@ -28,15 +28,17 @@ public class CubeSgfx implements RepresentableCube {
 
     @Override
     public void init() {
-        pic = new Picture("TEMPLATES/Board_Cubes/" + row + "/" + "(" + (col + 1) + ")" + ".png");
-        pic.draw();
+
+            pic = new Picture("TEMPLATES/" + row + "/" + col + ".png");
+            pic.draw();
     }
 
     @Override
     public void load(int col, int row) {
-        this.col = col;
-        this.row = row;
-        pic.load("TEMPLATES/Board_Cubes/" + this.row + "/" + "(" + (this.col + 1) + ")" + ".png");
+
+            this.col = col;
+            this.row = row;
+            pic.load("TEMPLATES/" + this.row + "/" + this.col + ".png");
     }
 
     @Override

@@ -14,7 +14,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 public class Game {
 
     private GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
-    private final int delay = 20; //TODO add two counters for different delays (lines and ball)
+    private final int delay = 100; //TODO add two counters for different delays (lines and ball)
     private boolean gameLoop;
 
     private RepresentableMaze simpleGraphicsMaze;
@@ -24,7 +24,7 @@ public class Game {
     private Ball ball;
 
     private GameObjectFactory factory;
-    private int gameLevel = 7;
+    private int gameLevel = 2;
     private int linesCounter = 1;
     private int trigger = gameObjects.length/gameLevel;
 
@@ -93,6 +93,8 @@ public class Game {
             if (gameObjects[i].getPos().getRow() < gameObjects.length - 1) {
                 gameObjects[i].move();
             } else {
+                //colision();
+                System.out.println(colision(i));
                 gameObjects[i].deleteLine();
                 gameObjects[i] = factory.createGameObject(gameLevel); //TODO pass gameLevel for move. dont make sense
             }
@@ -100,7 +102,11 @@ public class Game {
         }
     }
 
-    public void crash(){
-        // to make a new class
+    /**
+     * Request status (visible or not) from the cube with same col of the bal (if visible -> colision)
+     */
+    public boolean colision(int lineIndex){
+        GameObjects cube = gameObjects[lineIndex].getCube(ball.getPos().getCol());
+        return cube.isVisible();
     }
 }

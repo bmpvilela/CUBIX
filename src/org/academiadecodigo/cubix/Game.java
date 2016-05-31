@@ -14,15 +14,19 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 public class Game {
 
     private GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
-    private final int delay = 200; //TODO add two counters for different delays (lines and ball)
+    private final int delay = 100; //TODO add two counters for different delays (lines and ball)
     private boolean gameLoop;
+
     private RepresentableMaze simpleGraphicsMaze;
     private RepresentableBall simpleGraphicsBall;
+
     private Maze maze;
     private Ball ball;
+
     private GameObjectFactory factory;
-    private int gameLevel = 7;
-    private int linesCounter;
+    private int gameLevel = 2;
+    private int linesCounter = 1;
+    private int trigger = gameObjects.length/gameLevel;
 
     public Game(){
 
@@ -38,11 +42,10 @@ public class Game {
 
     public void startGame() throws InterruptedException {
 
-        int trigger;
-        int lineCreatorCounter = 0;
         simpleGraphicsMaze.init();
         simpleGraphicsBall.init();
-        create();
+
+        gameObjects[0] = factory.createGameObject(gameLevel);
 
         while (!gameLoop) { // gameLoop a negar propriedade default da gameLoop
 
@@ -60,19 +63,11 @@ public class Game {
              */
             trigger = gameObjects.length/gameLevel;
 
-            if(lineCreatorCounter < gameLevel){
-                if(gameObjects[0].getPos().getRow()%trigger==0 && gameObjects[0].getPos().getRow()!=0){
-                    create();
-                    lineCreatorCounter++;
-                }
-            }
+            create();
 
             // move
             moveLine();
-
         }
-
-
     }
 
     public void create(){
@@ -81,9 +76,12 @@ public class Game {
          * create a max of 7 lines (board lenght/2).
          * This gives a board fill with a line with cubes fallowed by a clean line
          */
+
         if (linesCounter < gameLevel){
-            gameObjects[linesCounter] = factory.createGameObject(gameLevel);
-            linesCounter++;
+            if(gameObjects[0].getPos().getRow()%trigger==0 && gameObjects[0].getPos().getRow()!=0){
+                gameObjects[linesCounter] = factory.createGameObject(gameLevel);
+                linesCounter++;
+            }
         }
 
     }
@@ -95,14 +93,12 @@ public class Game {
             if (gameObjects[i].getPos().getRow() < gameObjects.length - 1) {
                 gameObjects[i].move();
             } else {
+                //colision();
+                System.out.println(gameObjects[i].getCubeStatus(ball.getPos().getCol())); //Request status (visible or not) from the cube with same col of the bal (if visible -> colision)
                 gameObjects[i].deleteLine();
                 gameObjects[i] = factory.createGameObject(gameLevel); //TODO pass gameLevel for move. dont make sense
             }
 
         }
-    }
-
-    public void crash(){
-        // to make a new class
     }
 }

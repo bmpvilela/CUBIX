@@ -21,6 +21,8 @@ public class GameObjectsLines {
         this.gameObjectsLines = gameObjectsLines;
     }
 
+    public GameObjects[] getGameObjectsLines(){return gameObjectsLines; }
+
     public void move(){
         pos.setRow(pos.getRow() + 1);
 
@@ -30,6 +32,15 @@ public class GameObjectsLines {
             //System.out.println(gameObjectsLines[i].getPos().getCol() + " " + gameObjectsLines[i].getPos().getRow());
         }
 
+    }
+
+    /**
+     * Returns the column position of a specific cube for collision detect with ball
+     * @param index
+     * @return
+     */
+    public boolean getCubeStatus(int index){
+        return gameObjectsLines[index].isVisible();
     }
 
     public Position getPos() {

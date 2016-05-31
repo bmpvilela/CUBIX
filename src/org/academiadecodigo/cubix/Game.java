@@ -13,7 +13,7 @@ import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
  */
 public class Game {
 
-    private GameObjectsLines[] gameObjects = new GameObjectsLines[14]; // TODO change the game objects
+    private GameObjectsLines[] gameObjects = new GameObjectsLines[15]; // TODO change the game objects
     private final int delay = 100; //TODO add two counters for different delays (lines and ball)
     private boolean gameLoop;
 
@@ -24,7 +24,7 @@ public class Game {
     private Ball ball;
 
     private GameObjectFactory factory;
-    private int gameLevel = 2;
+    private int gameLevel = 7;
     private int linesCounter = 1;
     private int trigger = gameObjects.length/gameLevel;
 

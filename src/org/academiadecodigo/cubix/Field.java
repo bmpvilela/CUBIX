@@ -24,6 +24,7 @@ public class Field {
         for (int i = 0; i < cubeField.length; i++){ // i = 15 linhas (row)
             for (int j = 0; j < cubeField[i].length; j++) { // j = 9 colunas (col)
                 cubeField[i][j] = new Cube(i, j);
+                System.out.println("col: " + i + " row: " + j);
             }
         }
     }
@@ -31,9 +32,4 @@ public class Field {
     public Cube[] getCubeArray(int row){
         return cubeField[row];
     }
-
-    public void setCubeArray(Cube[] array, int row){
-        cubeField[row] = array;
-    }
-
 }

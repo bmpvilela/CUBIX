@@ -12,12 +12,15 @@ import java.util.LinkedList;
 public class Game {
 
     private LinkedList<Line> lineList = new LinkedList<Line>();
-    private int delay = 25;
+    private int delay = 175;
     private boolean gameLoop;
 
     private Field board;
 
     private int level = 1;
+    private int newLineCounter;
+    private int trigger = 15; //number of loops to create a new line
+    private int levelCounter;
 
     public Game(){
         board = new Field();
@@ -29,18 +32,24 @@ public class Game {
 
             Thread.sleep(delay);
 
-            create();
+            if (newLineCounter > trigger) {
+                create();
+            }
 
             moveLines();
 
-        }
+            gameLevel();
 
+            newLineCounter++;
+
+        }
     }
 
     private void create(){
-
-        lineList.add(new Line(level));
-
+        Line line = new Line(level);
+        setFieldLine(line);
+        lineList.add(line);
+        newLineCounter = 0;
     }
 
     private void moveLines(){
@@ -49,11 +58,15 @@ public class Game {
         Line line = null;
 
         while(it.hasNext()){
-            System.out.println("ola");
             line = it.next();
             clearFieldLine(line);
-            line.incrementLineRow();
-            setFieldLine(line);
+
+            if(line.getLineRow() == 14){
+                it.remove();
+            } else {
+                line.incrementLineRow();
+                setFieldLine(line);
+            }
         }
     }
 
@@ -73,6 +86,20 @@ public class Game {
 
         for (int i = 0; i<cube.length;i++){
             cube[i].setVisible(line.getLine()[i]);
+        }
+    }
+
+    private void gameLevel(){
+        levelCounter++;
+
+        if(levelCounter > (level*50)){
+            levelCounter = 0;
+            if(trigger != 1){
+                trigger = trigger - 2;
+                if( trigger == 9 || trigger == 5 || trigger == 3){
+                    level++;
+                }
+            }
         }
 
     }

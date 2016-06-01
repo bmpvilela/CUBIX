@@ -25,7 +25,7 @@ public class Line {
     private void openSpace(int numberOfHoles){ //TODO AddLevel Logic
 
         int counter = 0;
-        int holePosition = 0;
+        int holePosition;
 
         while(counter < numberOfHoles){
 
@@ -42,10 +42,8 @@ public class Line {
                     counter++;
                 }
             } else {
-                if ( line[holePosition] && line[holePosition + 1] && line[holePosition - 1] ) {
-                    line[holePosition] = false;
-                    counter++;
-                }
+                line[holePosition] = false;
+                counter++;
             }
         }
     }

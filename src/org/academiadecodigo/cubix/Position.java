@@ -33,6 +33,7 @@ public class Position {
      * @param p
      * @return
      */
+
     public boolean equals(Position p){
         return this.row == p.getRow();
     }

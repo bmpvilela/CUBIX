@@ -5,14 +5,8 @@ package org.academiadecodigo.cubix;
  */
 public interface RepresentableCube {
 
-    int getCol();
-
-    int getRow();
-
-    void init();
-
-    void load(int col, int row);
-
     void delete();
+
+    void draw();
 
 }

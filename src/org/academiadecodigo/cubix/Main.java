@@ -1,7 +1,5 @@
 package org.academiadecodigo.cubix;
 
-import org.academiadecodigo.cubix.simplegfx.MazeSgfx;
-
 /**
  * Created by codecadet on 23/05/16.
  */

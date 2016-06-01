@@ -1,7 +1,7 @@
 package org.academiadecodigo.cubix.player;
 
 import org.academiadecodigo.cubix.Position;
-import org.academiadecodigo.cubix.RepresentableMaze;
+import org.academiadecodigo.cubix.RepresentableField;
 
 /**
  * Created by codecadet on 23/05/16.
@@ -9,7 +9,7 @@ import org.academiadecodigo.cubix.RepresentableMaze;
 
 public class Ball{
 
-    private RepresentableMaze repr;
+    private RepresentableField repr;
     private Position pos;
 
     public Ball(){
@@ -20,11 +20,11 @@ public class Ball{
 
     }
 
-    public void setRepr(RepresentableMaze repr) {
+    public void setRepr(RepresentableField repr) {
         this.repr = repr;
     }
 
-    public RepresentableMaze getRepr() {
+    public RepresentableField getRepr() {
         return repr;
     }
 

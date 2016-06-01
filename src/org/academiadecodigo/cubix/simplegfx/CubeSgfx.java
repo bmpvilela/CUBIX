@@ -7,38 +7,17 @@ import org.academiadecodigo.simplegraphics.graphics.Picture;
  * Created by codecadet on 23/05/16.
  */
 public class CubeSgfx implements RepresentableCube {
-    private int col;
-    private int row;
+
     private Picture pic;
 
-    public CubeSgfx(int col, int row){
-        this.col = col;
-        this.row = row;
+    public CubeSgfx(int row, int col){
+        pic = new Picture("TEMPLATES/" + row + "/" + col + ".png");
     }
 
-    @Override
-    public int getCol() {
-        return col;
-    }
 
     @Override
-    public int getRow() {
-        return row;
-    }
-
-    @Override
-    public void init() {
-
-            pic = new Picture("TEMPLATES/" + row + "/" + col + ".png");
-            pic.draw();
-    }
-
-    @Override
-    public void load(int col, int row) {
-
-            this.col = col;
-            this.row = row;
-            pic.load("TEMPLATES/" + this.row + "/" + this.col + ".png");
+    public void draw() {
+        pic.draw();
     }
 
     @Override

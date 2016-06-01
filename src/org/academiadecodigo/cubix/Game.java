@@ -1,6 +1,7 @@
 package org.academiadecodigo.cubix;
 
 import org.academiadecodigo.cubix.gameobjects.Cube;
+import org.academiadecodigo.cubix.player.Ball;
 
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -12,10 +13,11 @@ import java.util.LinkedList;
 public class Game {
 
     private LinkedList<Line> lineList = new LinkedList<Line>();
-    private int delay = 175;
+    private int delay = 75;
     private boolean gameLoop;
 
     private Field board;
+    private Ball ball;
 
     private int level = 1;
     private int newLineCounter;
@@ -24,6 +26,7 @@ public class Game {
 
     public Game(){
         board = new Field();
+        ball = new Ball();
     }
 
     public void startGame() throws InterruptedException{
@@ -32,11 +35,11 @@ public class Game {
 
             Thread.sleep(delay);
 
+            moveLines();
+
             if (newLineCounter > trigger) {
                 create();
             }
-
-            moveLines();
 
             gameLevel();
 
@@ -55,13 +58,14 @@ public class Game {
     private void moveLines(){
 
         Iterator<Line> it = lineList.iterator();
-        Line line = null;
+        Line line;
 
         while(it.hasNext()){
             line = it.next();
             clearFieldLine(line);
 
-            if(line.getLineRow() == 14){
+            if(line.getLineRow() >= 14){
+                crash(line);
                 it.remove();
             } else {
                 line.incrementLineRow();
@@ -101,7 +105,13 @@ public class Game {
                 }
             }
         }
+    }
 
+    private void crash(Line line){
+        if(line.getLine()[ball.getCol()]){
+            System.out.println("crash!!!");
+            //gameLoop = true;
+        }
     }
 
 }

@@ -7,28 +7,21 @@ import org.academiadecodigo.simplegraphics.graphics.Picture;
  * Created by codecadet on 23/05/16.
  */
 public class BallSgfx implements RepresentableBall {
-    private int col;
-    private int row;
 
-    public BallSgfx(int col, int row){
-        this.col = col;
-        this.row = row;
+    private Picture pic;
+
+    public BallSgfx(int col){
+        pic = new Picture("TEMPLATES/Ball/" + col + ".png");
     }
 
     @Override
-    public int getCol() {
-        return 0;
-    }
-
-    @Override
-    public int getRow() {
-        return 0;
-    }
-
-    @Override
-    public void init() {
-        Picture pic = new Picture("TEMPLATES/Ball/" + col + ".png");
+    public void draw() {
         pic.draw();
+    }
+
+    @Override
+    public void delete() {
+        pic.delete();
     }
 }
 

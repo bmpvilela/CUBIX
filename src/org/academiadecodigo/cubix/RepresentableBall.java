@@ -5,9 +5,8 @@ package org.academiadecodigo.cubix;
  */
 public interface RepresentableBall {
 
-    int getCol();
+    void delete();
 
-    int getRow();
+    void draw();
 
-    void init();
 }

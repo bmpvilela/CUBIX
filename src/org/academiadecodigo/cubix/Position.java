@@ -27,15 +27,4 @@ public class Position {
         this.row = row;
     }
 
-    /**
-     * The position is equal if both rows are equals
-     *
-     * @param p
-     * @return
-     */
-
-    public boolean equals(Position p){
-        return this.row == p.getRow();
-    }
-
 }

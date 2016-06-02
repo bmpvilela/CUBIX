@@ -1,8 +1,6 @@
 package org.academiadecodigo.cubix;
 
 import org.academiadecodigo.cubix.gameobjects.Cube;
-import org.academiadecodigo.cubix.player.Ball;
-
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -12,44 +10,66 @@ import java.util.LinkedList;
 
 public class Game {
 
-    private LinkedList<Line> lineList = new LinkedList<Line>();
-    private int delay = 75;
+    private LinkedList<Line> lineList;
+    private int delay = 5;
     private boolean gameLoop;
+    private long time;
 
     private Field board;
-    private Ball ball;
+    private Player player;
 
-    private int level = 1;
+    private int numberOfHoles = 1;
     private int newLineCounter;
     private int trigger = 15; //number of loops to create a new line
     private int levelCounter;
+    private int score;
 
     public Game(){
+        lineList = new LinkedList<>();
         board = new Field();
-        ball = new Ball();
+        player = new Player();
+        time = System.currentTimeMillis();
     }
 
     public void startGame() throws InterruptedException{
+
+        int delayLine = 0;
+        int delayBall = 0;
 
         while(!gameLoop){
 
             Thread.sleep(delay);
 
-            moveLines();
-
-            if (newLineCounter > trigger) {
-                create();
+            if(65/delay == delayBall){
+                player.moveBall();
+                delayBall = 0;
             }
 
-            gameLevel();
+            if(175/delay == delayLine){
 
-            newLineCounter++;
+                moveLines();
+
+                if (newLineCounter > trigger) {
+                    create();
+                }
+
+                gameLevel();
+
+                newLineCounter++;
+                delayLine = 0;
+            }
+
+            delayLine++;
+            delayBall++;
 
         }
+
+        System.out.println("Score: " + score);
+        System.out.println("CRASH!!! GAME OVER!!!");
     }
 
     private void create(){
-        Line line = new Line(level);
+        Line line = new Line(numberOfHoles);
         setFieldLine(line);
         lineList.add(line);
         newLineCounter = 0;
@@ -67,6 +87,7 @@ public class Game {
             if(line.getLineRow() >= 14){
                 crash(line);
                 it.remove();
+                score++;
             } else {
                 line.incrementLineRow();
                 setFieldLine(line);
@@ -74,7 +95,7 @@ public class Game {
         }
     }
 
-    private void clearFieldLine(Line line){ // TODO ?? enviar a posicao para field e pedir para limpar a linha ??
+    private void clearFieldLine(Line line){
 
         Cube[] cube =  board.getCubeArray(line.getLineRow());
 
@@ -96,21 +117,26 @@ public class Game {
     private void gameLevel(){
         levelCounter++;
 
-        if(levelCounter > (level*50)){
+        if(levelCounter > (numberOfHoles*50)){
             levelCounter = 0;
             if(trigger != 1){
                 trigger = trigger - 2;
                 if( trigger == 9 || trigger == 5 || trigger == 3){
-                    level++;
+                    numberOfHoles++;
+                    System.out.println("Time: " + (System.currentTimeMillis()-time)/1000 + " | " + "level/Holes: "+ numberOfHoles + " | " + "EmptyLines: " + trigger);
+                }
+            } else {
+                if(numberOfHoles != 1){
+                    numberOfHoles--;
+                    System.out.println("Time: " + (System.currentTimeMillis()-time)/1000 + " | " + "level/Holes: "+ numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
             }
         }
     }
 
     private void crash(Line line){
-        if(line.getLine()[ball.getCol()]){
-            System.out.println("crash!!!");
-            //gameLoop = true;
+        if(line.getLine()[player.getCol()]){
+            gameLoop = true;
         }
     }
 

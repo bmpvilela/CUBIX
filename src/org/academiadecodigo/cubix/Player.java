@@ -41,4 +41,8 @@ public class Player{
             ballLine[getCol()].setVisible(true);
         }
     }
+
+    public void deleteBall(int col){
+        ballLine[col].setVisible(false);
+    }
 }

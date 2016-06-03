@@ -12,7 +12,7 @@ public class Player{
     private Position pos;
     private RepresentableKeyboard keyboard;
 
-    public Player(){
+    public Player(RepresentableKeyboard keyboard){
 
         pos = new Position();
         pos.setCol(4);
@@ -20,7 +20,8 @@ public class Player{
         createBallLine();
         ballLine[4].setVisible(true);
 
-        keyboard = new KeyboardSgfx();
+        this.keyboard = keyboard;
+        //keyboard = new KeyboardSgfx();
     }
 
     private void createBallLine(){

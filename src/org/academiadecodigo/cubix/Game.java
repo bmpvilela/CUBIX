@@ -12,6 +12,8 @@ import java.util.LinkedList;
 
 public class Game {
 
+    private Menu menu;
+
     private LinkedList<Line> lineList;
     private int delay = 5;
     private boolean gameLoop;
@@ -29,37 +31,54 @@ public class Game {
     private RepresentableKeyboard keyboard;
     private boolean pauseControl;
 
-    public Game(){
+    public Game() throws InterruptedException {
         keyboard = new KeyboardSgfx();
-        lineList = new LinkedList<>();
-        board = new Field();
-        player = new Player();
-        time = System.currentTimeMillis();
+        menu = new Menu(keyboard);
+        init();
     }
 
-    public void startGame() throws InterruptedException{
+
+    public void init() throws InterruptedException {
+        menu.optionMenu();
+        startGame();
+    }
+
+    public void startGame() throws InterruptedException {
+
+        lineList = new LinkedList<>();
+        board = new Field();
+        player = new Player(keyboard);
+        time = System.currentTimeMillis();
+
+        try {
+            gameLoop();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        menu.gameOver();
+        board.resetField();
+        init();
+
+    }
+
+    private void gameLoop() throws InterruptedException {
 
         int delayLine = 0;
         int delayBall = 0;
+        score = 0;
+        gameLoop = false;
 
         while(!gameLoop){
 
             Thread.sleep(delay);
 
-<<<<<<< HEAD
             if(keyboard.input()==32) pauseControl = !pauseControl;
-=======
-            if(65/delay == delayBall){
-                player.moveBall();
-                crash();
-                delayBall = 0;
-            }
->>>>>>> b2e148d61dde085852e66cb08d88bf5586f5f02b
 
             if (!pauseControl){
-
-                if(65/delay == delayBall){
+                if(60/delay == delayBall){
                     player.moveBall();
+                    crash();
                     delayBall = 0;
                 }
 
@@ -80,30 +99,30 @@ public class Game {
                 delayLine++;
                 delayBall++;
             }
-
-        }
-
-        System.out.println("Score: " + score);
-        System.out.println("CRASH!!! GAME OVER!!!");
     }
 
-    private void create(){
+
+    System.out.println("Score: "+score);
+    System.out.println("CRASH!!! GAME OVER!!!");
+}
+
+    private void create() {
         Line line = new Line(numberOfHoles);
         setFieldLine(line);
         lineList.add(line);
         newLineCounter = 0;
     }
 
-    private void moveLines(){
+    private void moveLines() {
 
         Iterator<Line> it = lineList.iterator();
         Line line;
 
-        while(it.hasNext()){
+        while (it.hasNext()) {
             line = it.next();
             clearFieldLine(line);
 
-            if(line.getLineRow() >= 14){
+            if (line.getLineRow() >= 14) {
                 //crash(line);
                 it.remove();
                 score++;
@@ -114,40 +133,40 @@ public class Game {
         }
     }
 
-    private void clearFieldLine(Line line){
+    private void clearFieldLine(Line line) {
 
-        Cube[] cube =  board.getCubeArray(line.getLineRow());
+        Cube[] cube = board.getCubeArray(line.getLineRow());
 
-        for (int i = 0; i<cube.length;i++){
+        for (int i = 0; i < cube.length; i++) {
             cube[i].setVisible(false);
         }
 
     }
 
-    private void setFieldLine(Line line){
+    private void setFieldLine(Line line) {
 
-        Cube[] cube =  board.getCubeArray(line.getLineRow());
+        Cube[] cube = board.getCubeArray(line.getLineRow());
 
-        for (int i = 0; i<cube.length;i++){
+        for (int i = 0; i < cube.length; i++) {
             cube[i].setVisible(line.getLine()[i]);
         }
     }
 
-    private void gameLevel(){
+    private void gameLevel() {
         levelCounter++;
 
-        if(levelCounter > (numberOfHoles*50)){
+        if (levelCounter > (numberOfHoles * 50)) {
             levelCounter = 0;
-            if(trigger != 1){
+            if (trigger != 1) {
                 trigger = trigger - 2;
-                if( trigger == 9 || trigger == 5 || trigger == 3){
+                if (trigger == 9 || trigger == 5 || trigger == 3) {
                     numberOfHoles++;
-                    System.out.println("Time: " + (System.currentTimeMillis()-time)/1000 + " | " + "level/Holes: "+ numberOfHoles + " | " + "EmptyLines: " + trigger);
+                    System.out.println("Time: " + (System.currentTimeMillis() - time) / 1000 + " | " + "level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
             } else {
-                if(numberOfHoles != 1){
+                if (numberOfHoles != 1) {
                     numberOfHoles--;
-                    System.out.println("Time: " + (System.currentTimeMillis()-time)/1000 + " | " + "level/Holes: "+ numberOfHoles + " | " + "EmptyLines: " + trigger);
+                    System.out.println("Time: " + (System.currentTimeMillis() - time) / 1000 + " | " + "level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
             }
         }
@@ -161,16 +180,17 @@ public class Game {
     }
     */
 
-    private void crash(){
-    Iterator<Line> it = lineList.iterator();
+    private void crash() {
+        Iterator<Line> it = lineList.iterator();
         Line line;
 
-        while(it.hasNext()){
+        while (it.hasNext()) {
             line = it.next();
 
-            if(line.getLineRow() >= 14){
-                if(line.getLine()[player.getCol()]){
+            if (line.getLineRow() >= 14) {
+                if (line.getLine()[player.getCol()]) {
                     player.deleteBall(player.getCol());
+
                     gameLoop = true;
                 }
             }

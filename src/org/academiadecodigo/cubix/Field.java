@@ -29,6 +29,14 @@ public class Field {
         }
     }
 
+    public void resetField(){
+        for (int i = 0; i < cubeField.length; i++){ // i = 15 linhas (row)
+            for (int j = 0; j < cubeField[i].length; j++) { // j = 9 colunas (col)
+                cubeField[i][j].setVisible(false);
+            }
+        }
+    }
+
     public Cube[] getCubeArray(int row){
         return cubeField[row];
     }

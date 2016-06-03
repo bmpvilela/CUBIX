@@ -1,6 +1,8 @@
 package org.academiadecodigo.cubix;
 
 import org.academiadecodigo.cubix.gameobjects.Cube;
+import org.academiadecodigo.cubix.simplegfx.KeyboardSgfx;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -24,7 +26,11 @@ public class Game {
     private int levelCounter;
     private int score;
 
+    private RepresentableKeyboard keyboard;
+    private boolean pauseControl;
+
     public Game(){
+        keyboard = new KeyboardSgfx();
         lineList = new LinkedList<>();
         board = new Field();
         player = new Player();
@@ -40,27 +46,32 @@ public class Game {
 
             Thread.sleep(delay);
 
-            if(65/delay == delayBall){
-                player.moveBall();
-                delayBall = 0;
-            }
+            if(keyboard.input()==32) pauseControl = !pauseControl;
 
-            if(175/delay == delayLine){
+            if (!pauseControl){
 
-                moveLines();
-
-                if (newLineCounter > trigger) {
-                    create();
+                if(65/delay == delayBall){
+                    player.moveBall();
+                    delayBall = 0;
                 }
 
-                gameLevel();
+                if(175/delay == delayLine){
 
-                newLineCounter++;
-                delayLine = 0;
+                    moveLines();
+
+                    if (newLineCounter > trigger) {
+                        create();
+                    }
+
+                    gameLevel();
+
+                    newLineCounter++;
+                    delayLine = 0;
+                }
+
+                delayLine++;
+                delayBall++;
             }
-
-            delayLine++;
-            delayBall++;
 
         }
 

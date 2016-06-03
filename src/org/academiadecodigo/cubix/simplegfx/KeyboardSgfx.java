@@ -20,6 +20,8 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
         createEvent(KeyboardEvent.KEY_RIGHT);
         createReleaseEvent(KeyboardEvent.KEY_LEFT);
         createReleaseEvent(KeyboardEvent.KEY_RIGHT);
+        createEvent(KeyboardEvent.KEY_SPACE);
+        createReleaseEvent(KeyboardEvent.KEY_SPACE);
     }
 
     private void createEvent(int key){
@@ -50,6 +52,10 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
 
             case KeyboardEvent.KEY_RIGHT:
                 numb = 1;
+                break;
+
+            case KeyboardEvent.KEY_SPACE:
+                numb = 32;
                 break;
         }
     }

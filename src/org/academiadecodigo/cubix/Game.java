@@ -42,6 +42,7 @@ public class Game {
 
             if(65/delay == delayBall){
                 player.moveBall();
+                crash();
                 delayBall = 0;
             }
 
@@ -85,7 +86,7 @@ public class Game {
             clearFieldLine(line);
 
             if(line.getLineRow() >= 14){
-                crash(line);
+                //crash(line);
                 it.remove();
                 score++;
             } else {
@@ -134,9 +135,27 @@ public class Game {
         }
     }
 
+    /*
     private void crash(Line line){
         if(line.getLine()[player.getCol()]){
             gameLoop = true;
+        }
+    }
+    */
+
+    private void crash(){
+    Iterator<Line> it = lineList.iterator();
+        Line line;
+
+        while(it.hasNext()){
+            line = it.next();
+
+            if(line.getLineRow() >= 14){
+                if(line.getLine()[player.getCol()]){
+                    player.deleteBall(player.getCol());
+                    gameLoop = true;
+                }
+            }
         }
     }
 

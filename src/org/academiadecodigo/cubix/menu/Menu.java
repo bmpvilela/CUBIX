@@ -14,7 +14,7 @@ public class Menu {
     /**
      * Constructs a new menu
      *
-     * @param keyboard
+     * @param keyboard the menu's keyboard
      * @throws InterruptedException
      */
     public Menu(RepresentableKeyboard keyboard) throws InterruptedException {
@@ -23,6 +23,11 @@ public class Menu {
         sGraphicsMenu = new MenuSgfx(); // instancia o simplegraphics do startscreen
     }
 
+    /**
+     * Draws a menu image, when the space key is pressed the image is deleted
+     *
+     * @throws InterruptedException
+     */
     public void optionMenu() throws InterruptedException {
 
         sGraphicsMenu.drawMenu();
@@ -35,6 +40,11 @@ public class Menu {
         sGraphicsMenu.deleteMenu();
     }
 
+    /**
+     * Draws a game over image when the player loses and after a while deletes it
+     *
+     * @throws InterruptedException
+     */
     public void gameOver() throws InterruptedException {
 
         sGraphicsMenu.drawGameOver();

@@ -37,6 +37,12 @@ public class Game {
     private RepresentableKeyboard keyboard;
     private boolean pauseControl;
 
+
+    /**
+     * Creates a new game
+     *
+     * @throws InterruptedException
+     */
     public Game() throws InterruptedException {
 
         keyboard = new KeyboardSgfx();
@@ -45,12 +51,22 @@ public class Game {
         init();
     }
 
+    /**
+     * Initializes a menu and a game
+     *
+     * @throws InterruptedException
+     */
     public void init() throws InterruptedException {
 
         menu.optionMenu();
         startGame();
     }
 
+    /**
+     *
+     *
+     * @throws InterruptedException
+     */
     public void startGame() throws InterruptedException {
 
         lineList = new LinkedList<>();
@@ -69,6 +85,8 @@ public class Game {
         init();
 
     }
+
+
 
     private void gameLoop() throws InterruptedException {
 
@@ -159,6 +177,7 @@ public class Game {
             cube[i].setVisible(line.getLine()[i]);
         }
     }
+
 
     private void gameLevel() {
 

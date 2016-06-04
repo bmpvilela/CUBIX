@@ -10,16 +10,23 @@ public class ScoreNumber {
     private RepresentableScoreNumber sGraphicScoreNumber;
     private boolean isVisible;
 
+    /**
+     * Creates a new graphic representation of the score number
+     *
+     * @param score the score number
+     */
+
     public ScoreNumber(int score){
 
         sGraphicScoreNumber = new ScoreNumberSgfx(score);
     }
 
-    public boolean isVisible() {
-        return isVisible;
-    }
 
-    // metodo que torna o cubo visivel ou invisivel (por definição, o cubo esta sempre invisivel):
+    /**
+     * Sets the visibility of the score number in the screen simply by drawing or deleting is image
+     *
+     * @param visible the visibility of the score number
+     */
     public void setVisible(boolean visible) {
 
         isVisible = visible;
@@ -29,5 +36,13 @@ public class ScoreNumber {
             sGraphicScoreNumber.delete();
         }
     }
+
+
+    //Getters and setters
+    public boolean isVisible() {
+        return isVisible;
+    }
+
+
 
 }

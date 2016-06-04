@@ -14,9 +14,9 @@ public class Ball{
     private boolean isVisible;
 
     /**
-     * Constructs a new ball
+     * Creates a new ball
      *
-     * @param col initial ball column position
+     * @param col the initial ball column position
      */
     public Ball(int col){
 

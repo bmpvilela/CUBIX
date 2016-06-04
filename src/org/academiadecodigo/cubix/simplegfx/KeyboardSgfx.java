@@ -15,25 +15,29 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     private int numb = 0;
 
     /**
-     * Creates the atribuilhe devidas teclas com devidos eventos
+     * Creates a new keyboard and assigns it some keys and their respective keyboard events
      */
     public KeyboardSgfx(){
 
         keyboard = new Keyboard(this);
-        createPressedEvent(KeyboardEvent.KEY_LEFT);
-        createPressedEvent(KeyboardEvent.KEY_RIGHT);
+        createPressEvent(KeyboardEvent.KEY_LEFT);
+        createPressEvent(KeyboardEvent.KEY_RIGHT);
         createReleaseEvent(KeyboardEvent.KEY_LEFT);
         createReleaseEvent(KeyboardEvent.KEY_RIGHT);
-        createPressedEvent(KeyboardEvent.KEY_SPACE);
+        createPressEvent(KeyboardEvent.KEY_SPACE);
         createReleaseEvent(KeyboardEvent.KEY_SPACE);
-        createPressedEvent(KeyboardEvent.KEY_UP);
+        createPressEvent(KeyboardEvent.KEY_UP);
         createReleaseEvent(KeyboardEvent.KEY_UP);
-        createPressedEvent(KeyboardEvent.KEY_DOWN);
+        createPressEvent(KeyboardEvent.KEY_DOWN);
         createReleaseEvent(KeyboardEvent.KEY_DOWN);
     }
 
-
-    private void createPressedEvent(int key){
+    /**
+     * Creates a new keyboard event when a key is pressed
+     *
+     * @param key the key number
+     */
+    private void createPressEvent(int key){
 
         KeyboardEvent event = new KeyboardEvent();
         event.setKey(key);
@@ -41,6 +45,11 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
         keyboard.addEventListener(event);
     }
 
+    /**
+     * Creates a new keyboard event when a key is released
+     *
+     * @param key the key number
+     */
     private void createReleaseEvent(int key){
 
         KeyboardEvent event = new KeyboardEvent();
@@ -53,6 +62,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     public int input() {
         return numb;
     }
+
 
     @Override
     public void keyPressed(KeyboardEvent e) {

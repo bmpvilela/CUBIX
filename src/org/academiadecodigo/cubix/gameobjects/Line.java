@@ -11,7 +11,7 @@ public class Line {
     private Position pos;
 
     /**
-     * Constructs a new line with the respective cube visibility
+     * Creates a new line with the respective cube visibility
      *
      * @param numberOfHoles the number of hidden cubes
      */

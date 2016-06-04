@@ -14,10 +14,10 @@ public class Cube {
     private RepresentableCube simpleGraphicsCube;
 
     /**
-     * Constructs a new cube
+     * Creates a new cube
      *
-     * @param row initial cube row position
-     * @param col initial cube column position
+     * @param row the initial cube row position
+     * @param col the initial cube column position
      */
     public Cube(int row, int col){
 

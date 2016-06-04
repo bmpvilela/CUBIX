@@ -11,14 +11,14 @@ public class ScoreLevel {
     private boolean isVisible;
 
     /**
-     * Constructs a new level number
-     * @param level the number of the level
+     * Creates a new graphic representation of the level number
+     *
+     * @param level the level number
      */
 
     public ScoreLevel(int level){
 
         sGraphicScoreLevel = new ScoreLevelSgfx(level);
-
     }
 
     /**
@@ -35,5 +35,4 @@ public class ScoreLevel {
             sGraphicScoreLevel.delete();
         }
     }
-
 }

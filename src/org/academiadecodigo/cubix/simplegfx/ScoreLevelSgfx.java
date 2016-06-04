@@ -13,7 +13,7 @@ public class ScoreLevelSgfx implements RepresentableScoreLevel{
     /**
      * Creates the graphic representation of the level number
      *
-     * @param level the number of the level
+     * @param level the level number
      */
     public ScoreLevelSgfx(int level){
         pic = new Picture("TEMPLATES/level/" + level + ".png");

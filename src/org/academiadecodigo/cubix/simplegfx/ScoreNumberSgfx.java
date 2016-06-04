@@ -13,7 +13,7 @@ public class ScoreNumberSgfx implements RepresentableScoreNumber{
     /**
      * Creates the graphic representation of the score number
      *
-     * @param score the number of the score
+     * @param score the score number
      */
     public ScoreNumberSgfx(int score){
         pic = new Picture("TEMPLATES/score/" + score + ".png");

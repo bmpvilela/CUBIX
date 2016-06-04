@@ -27,6 +27,7 @@ public class Game {
     private int newLineCounter;
     private int trigger = 15; //number of loops to create a new line
     private int levelCounter;
+    private int level=1;
     private int score;
 
     private RepresentableKeyboard keyboard;
@@ -75,6 +76,7 @@ public class Game {
         while(!gameLoop){
 
             scoreboard.showPoints(score);
+            scoreboard.showLevel(level);
 
             Thread.sleep(delay);
 
@@ -103,11 +105,11 @@ public class Game {
 
                 delayLine++;
                 delayBall++;
+
             }
+        }
     }
 
-    System.out.println("Score: "+score);
-}
     private void create() {
 
         Line line = new Line(numberOfHoles);
@@ -162,17 +164,23 @@ public class Game {
             levelCounter = 0;
             if (trigger != 1) {
                 trigger = trigger - 2;
+
                 if (trigger == 9 || trigger == 5 || trigger == 3) {
                     numberOfHoles++;
-                    System.out.println("Level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
+
+                if(trigger == 5 || trigger == 3 || trigger == 1){
+                    level++;
+                }
+
             } else {
                 if (numberOfHoles != 1) {
                     numberOfHoles--;
-                    System.out.println("Level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
+                    level++;
                 }
             }
         }
+
     }
 
     private void crash() {
@@ -191,7 +199,5 @@ public class Game {
                 }
             }
         }
-
     }
-
 }

@@ -22,7 +22,7 @@ public class Menu {
         sGraphicsMenu.drawMenu();
 
         while(keyboard.input() != 32){
-            Thread.sleep(100);
+            Thread.sleep(5);
             //decision
         }
 

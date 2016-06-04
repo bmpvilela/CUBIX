@@ -5,6 +5,9 @@ package org.academiadecodigo.cubix;
  */
 public interface RepresentableField {
 
+    /**
+     * Initializes the field
+     */
     void init();
 
 }

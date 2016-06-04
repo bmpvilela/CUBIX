@@ -1,6 +1,6 @@
 package org.academiadecodigo.cubix.simplegfx;
 
-import org.academiadecodigo.cubix.RepresentableScoreLevel;
+import org.academiadecodigo.cubix.scoreboard.RepresentableScoreLevel;
 import org.academiadecodigo.simplegraphics.graphics.Picture;
 
 /**

@@ -1,6 +1,6 @@
 package org.academiadecodigo.cubix.simplegfx;
 
-import org.academiadecodigo.cubix.RepresentableBall;
+import org.academiadecodigo.cubix.gameobjects.RepresentableBall;
 import org.academiadecodigo.simplegraphics.graphics.Picture;
 
 /**
@@ -10,9 +10,16 @@ public class BallSgfx implements RepresentableBall {
 
     private Picture pic;
 
+
+    /**
+     * Creates the graphic representation of the ball
+     *
+     * @param col initial ball position
+     */
     public BallSgfx(int col){
-        pic = new Picture("TEMPLATES/Ball/" + col + ".png");
+        pic = new Picture("TEMPLATES/ball/" + col + ".png");
     }
+
 
     @Override
     public void draw() {

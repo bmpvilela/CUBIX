@@ -1,6 +1,6 @@
 package org.academiadecodigo.cubix.simplegfx;
 
-import org.academiadecodigo.cubix.RepresentableMenu;
+import org.academiadecodigo.cubix.menu.RepresentableMenu;
 import org.academiadecodigo.simplegraphics.graphics.Picture;
 
 /**

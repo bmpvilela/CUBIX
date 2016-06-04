@@ -3,14 +3,17 @@ package org.academiadecodigo.cubix;
 /**
  * Created by codecadet on 23/05/16.
  */
+
+/**
+ * Saves and changes the position of the objects
+ */
 public class Position {
 
     private int col;
     private int row;
 
 
-    // GETTERS && SETTERS:
-
+    // Getters && setters
     public int getCol() {
         return col;
     }

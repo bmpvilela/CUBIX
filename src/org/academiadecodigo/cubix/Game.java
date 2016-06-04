@@ -1,6 +1,10 @@
 package org.academiadecodigo.cubix;
 
-import org.academiadecodigo.cubix.gameobjects.Cube;
+import org.academiadecodigo.cubix.gameobjects.Line;
+import org.academiadecodigo.cubix.gameobjects.Player;
+import org.academiadecodigo.cubix.gameobjects.cube.Cube;
+import org.academiadecodigo.cubix.menu.Menu;
+import org.academiadecodigo.cubix.scoreboard.ScoreBoard;
 import org.academiadecodigo.cubix.simplegfx.KeyboardSgfx;
 
 import java.util.Iterator;

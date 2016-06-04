@@ -9,6 +9,12 @@ import org.academiadecodigo.simplegraphics.graphics.Picture;
 public class ScoreNumberSgfx implements RepresentableScoreNumber{
     private Picture pic;
 
+
+    /**
+     * Creates the graphic representation of the score number
+     *
+     * @param score the number of the score
+     */
     public ScoreNumberSgfx(int score){
         pic = new Picture("TEMPLATES/score/" + score + ".png");
     }

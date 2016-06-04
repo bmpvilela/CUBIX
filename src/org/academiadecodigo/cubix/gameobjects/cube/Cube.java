@@ -16,8 +16,8 @@ public class Cube {
     /**
      * Constructs a new cube
      *
-     * @param row initial cube position row
-     * @param col initial cube position column
+     * @param row initial cube row position
+     * @param col initial cube column position
      */
     public Cube(int row, int col){
 

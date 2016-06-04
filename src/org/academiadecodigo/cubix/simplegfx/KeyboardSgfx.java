@@ -14,22 +14,26 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     private Keyboard keyboard;
     private int numb = 0;
 
+    /**
+     * Creates the atribuilhe devidas teclas com devidos eventos
+     */
     public KeyboardSgfx(){
 
         keyboard = new Keyboard(this);
-        createEvent(KeyboardEvent.KEY_LEFT);
-        createEvent(KeyboardEvent.KEY_RIGHT);
+        createPressedEvent(KeyboardEvent.KEY_LEFT);
+        createPressedEvent(KeyboardEvent.KEY_RIGHT);
         createReleaseEvent(KeyboardEvent.KEY_LEFT);
         createReleaseEvent(KeyboardEvent.KEY_RIGHT);
-        createEvent(KeyboardEvent.KEY_SPACE);
+        createPressedEvent(KeyboardEvent.KEY_SPACE);
         createReleaseEvent(KeyboardEvent.KEY_SPACE);
-        createEvent(KeyboardEvent.KEY_UP);
+        createPressedEvent(KeyboardEvent.KEY_UP);
         createReleaseEvent(KeyboardEvent.KEY_UP);
-        createEvent(KeyboardEvent.KEY_DOWN);
+        createPressedEvent(KeyboardEvent.KEY_DOWN);
         createReleaseEvent(KeyboardEvent.KEY_DOWN);
     }
 
-    private void createEvent(int key){
+
+    private void createPressedEvent(int key){
 
         KeyboardEvent event = new KeyboardEvent();
         event.setKey(key);

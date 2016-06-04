@@ -11,7 +11,12 @@ public class Menu {
     private RepresentableMenu sGraphicsMenu;
     private RepresentableKeyboard keyboard;
 
-    // metodo construtor do Menu
+    /**
+     * Constructs a new menu
+     *
+     * @param keyboard
+     * @throws InterruptedException
+     */
     public Menu(RepresentableKeyboard keyboard) throws InterruptedException {
 
         this.keyboard = keyboard;

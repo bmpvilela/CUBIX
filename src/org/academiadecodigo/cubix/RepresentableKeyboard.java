@@ -5,6 +5,9 @@ package org.academiadecodigo.cubix;
  */
 public interface RepresentableKeyboard {
 
+    /**
+     * Returns the input in the keyboard
+     */
     int input();
 
 }

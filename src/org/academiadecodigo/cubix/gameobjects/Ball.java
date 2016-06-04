@@ -16,7 +16,7 @@ public class Ball{
     /**
      * Constructs a new ball
      *
-     * @param col initial ball position column
+     * @param col initial ball column position
      */
     public Ball(int col){
 
@@ -25,7 +25,6 @@ public class Ball{
         simpleGraphicBall = new BallSgfx(pos.getCol());
     }
 
-    // metodo que torna o cubo visivel ou invisivel (por definição, o cubo esta sempre invisivel)
 
     /**
      * Sets the visibility of the ball in the screen simply by drawing or deleting is image

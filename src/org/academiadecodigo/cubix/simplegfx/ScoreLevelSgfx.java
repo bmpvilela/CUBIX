@@ -10,6 +10,11 @@ public class ScoreLevelSgfx implements RepresentableScoreLevel{
 
     private Picture pic;
 
+    /**
+     * Creates the graphic representation of the level number
+     *
+     * @param level the number of the level
+     */
     public ScoreLevelSgfx(int level){
         pic = new Picture("TEMPLATES/level/" + level + ".png");
     }
@@ -22,10 +27,5 @@ public class ScoreLevelSgfx implements RepresentableScoreLevel{
     @Override
     public void delete() {
         pic.delete();
-    }
-
-    public void showLevel(int level) {
-        delete();
-        draw();
     }
 }

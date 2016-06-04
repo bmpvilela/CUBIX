@@ -5,12 +5,24 @@ package org.academiadecodigo.cubix.menu;
  */
 public interface RepresentableMenu {
 
+    /**
+     * Deletes the menu image
+     */
     void deleteMenu();
 
+    /**
+     * Draw the menu image
+     */
     void drawMenu();
 
+    /**
+     * Deletes the game over image
+     */
     void deleteGameOver();
 
+    /**
+     * Draw the game over image
+     */
     void drawGameOver();
 
 }

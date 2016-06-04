@@ -14,7 +14,6 @@ public class CubeSgfx implements RepresentableCube {
         pic = new Picture("TEMPLATES/" + row + "/" + col + ".png");
     }
 
-
     @Override
     public void draw() {
         pic.draw();

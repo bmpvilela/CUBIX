@@ -1,6 +1,5 @@
 package org.academiadecodigo.cubix;
 
-import org.academiadecodigo.cubix.simplegfx.KeyboardSgfx;
 import org.academiadecodigo.cubix.simplegfx.MenuSgfx;
 
 /**
@@ -8,41 +7,33 @@ import org.academiadecodigo.cubix.simplegfx.MenuSgfx;
  */
 public class Menu {
 
-    private RepresentableMenu simpleGraphicsStartMenu;
+    private RepresentableMenu sGraphicsMenu;
     private RepresentableKeyboard keyboard;
-
-
-
 
     // metodo construtor do Menu
     public Menu(RepresentableKeyboard keyboard) throws InterruptedException {
-        //keyboard = new KeyboardSgfx();
 
         this.keyboard = keyboard;
-        simpleGraphicsStartMenu = new MenuSgfx(); // instancia o simplegraphics do startscreen
+        sGraphicsMenu = new MenuSgfx(); // instancia o simplegraphics do startscreen
     }
 
     public void optionMenu() throws InterruptedException {
 
-        simpleGraphicsStartMenu.draw();
+        sGraphicsMenu.drawMenu();
 
         while(keyboard.input() != 32){
             Thread.sleep(100);
             //decision
         }
 
-        simpleGraphicsStartMenu.delete();
-
-        System.out.println("init game");
+        sGraphicsMenu.deleteMenu();
     }
 
     public void gameOver() throws InterruptedException {
 
-        simpleGraphicsStartMenu.drawGameOver();
-
+        sGraphicsMenu.drawGameOver();
         Thread.sleep(3000);
-
-        simpleGraphicsStartMenu.deleteGameOver();
+        sGraphicsMenu.deleteGameOver();
     }
 
 }

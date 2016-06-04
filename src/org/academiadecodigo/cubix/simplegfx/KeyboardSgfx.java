@@ -15,6 +15,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     private int numb = 0;
 
     public KeyboardSgfx(){
+
         keyboard = new Keyboard(this);
         createEvent(KeyboardEvent.KEY_LEFT);
         createEvent(KeyboardEvent.KEY_RIGHT);
@@ -29,6 +30,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     }
 
     private void createEvent(int key){
+
         KeyboardEvent event = new KeyboardEvent();
         event.setKey(key);
         event.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -36,6 +38,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     }
 
     private void createReleaseEvent(int key){
+
         KeyboardEvent event = new KeyboardEvent();
         event.setKey(key);
         event.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
@@ -49,6 +52,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
 
     @Override
     public void keyPressed(KeyboardEvent e) {
+
         switch (e.getKey()){
             case KeyboardEvent.KEY_LEFT:
                 numb = -1;

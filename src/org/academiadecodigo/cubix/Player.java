@@ -1,7 +1,6 @@
 package org.academiadecodigo.cubix;
 
 import org.academiadecodigo.cubix.ball.Ball;
-import org.academiadecodigo.cubix.simplegfx.KeyboardSgfx;
 
 /**
  * Created by codecadet on 02/06/16.
@@ -21,13 +20,12 @@ public class Player{
         ballLine[4].setVisible(true);
 
         this.keyboard = keyboard;
-        //keyboard = new KeyboardSgfx();
     }
 
     private void createBallLine(){
+
         for(int i = 0; i< ballLine.length;i++){
             ballLine[i] = new Ball(i);
-            System.out.println("Ball col: " + ballLine[i].getCol());
         }
     }
 
@@ -36,6 +34,7 @@ public class Player{
     }
 
     public void moveBall() {
+
         if(getCol() + keyboard.input() >= 0 && getCol() + keyboard.input() <= 8){
             ballLine[getCol()].setVisible(false);
             pos.setCol(getCol() + keyboard.input());

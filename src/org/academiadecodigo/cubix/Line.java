@@ -9,6 +9,7 @@ public class Line {
     private Position pos;
 
     public Line(int numberOfHoles){
+
         pos = new Position();
         setLineTrue();
         openSpace(numberOfHoles);
@@ -16,6 +17,7 @@ public class Line {
 
     // põe todos as linhas a "true" (percorre todas linhas e mete-as a true)
     private void setLineTrue(){
+
         for (int i = 0; i < line.length;i++) {
             line[i] = true;
         }

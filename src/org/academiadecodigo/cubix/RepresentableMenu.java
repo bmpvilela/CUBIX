@@ -5,9 +5,9 @@ package org.academiadecodigo.cubix;
  */
 public interface RepresentableMenu {
 
-    void delete();
+    void deleteMenu();
 
-    void draw();
+    void drawMenu();
 
     void deleteGameOver();
 

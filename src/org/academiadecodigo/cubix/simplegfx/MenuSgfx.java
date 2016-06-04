@@ -8,28 +8,30 @@ import org.academiadecodigo.simplegraphics.graphics.Picture;
  */
 public class MenuSgfx implements RepresentableMenu {
 
-    private Picture pic;
-    private Picture gameOver;
+    private Picture picMenu;
+    private Picture picGameOver;
 
     @Override
     public void deleteGameOver() {
-        gameOver.delete();
+        picGameOver.delete();
     }
 
     @Override
     public void drawGameOver() {
-        gameOver = new Picture("TEMPLATES/GameOver.png");
-        gameOver.draw();
+
+        picGameOver = new Picture("TEMPLATES/GameOver.png");
+        picGameOver.draw();
     }
 
     @Override
-    public void delete() {
-        pic.delete();
+    public void deleteMenu() {
+        picMenu.delete();
     }
 
     @Override
-    public void draw() {
-        pic = new Picture("TEMPLATES/Menu.png");
-        pic.draw();
+    public void drawMenu() {
+
+        picMenu = new Picture("TEMPLATES/SpaceToStart.png");
+        picMenu.draw();
     }
 }

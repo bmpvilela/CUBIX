@@ -27,6 +27,7 @@ public class Ball{
 
     // metodo que torna o cubo visivel ou invisivel (por definição, o cubo esta sempre invisivel):
     public void setVisible(boolean visible) {
+
         isVisible = visible;
         if(isVisible){
             simpleGraphicBall.draw();

@@ -21,6 +21,7 @@ public class Game {
 
     private Field board;
     private Player player;
+    private ScoreBoard scoreboard;
 
     private int numberOfHoles = 1;
     private int newLineCounter;
@@ -32,13 +33,15 @@ public class Game {
     private boolean pauseControl;
 
     public Game() throws InterruptedException {
+
         keyboard = new KeyboardSgfx();
         menu = new Menu(keyboard);
+
         init();
     }
 
-
     public void init() throws InterruptedException {
+
         menu.optionMenu();
         startGame();
     }
@@ -48,7 +51,7 @@ public class Game {
         lineList = new LinkedList<>();
         board = new Field();
         player = new Player(keyboard);
-        time = System.currentTimeMillis();
+        scoreboard = new ScoreBoard();
 
         try {
             gameLoop();
@@ -70,6 +73,8 @@ public class Game {
         gameLoop = false;
 
         while(!gameLoop){
+
+            scoreboard.showPoints(score);
 
             Thread.sleep(delay);
 
@@ -101,12 +106,10 @@ public class Game {
             }
     }
 
-
     System.out.println("Score: "+score);
-    System.out.println("CRASH!!! GAME OVER!!!");
 }
-
     private void create() {
+
         Line line = new Line(numberOfHoles);
         setFieldLine(line);
         lineList.add(line);
@@ -123,7 +126,6 @@ public class Game {
             clearFieldLine(line);
 
             if (line.getLineRow() >= 14) {
-                //crash(line);
                 it.remove();
                 score++;
             } else {
@@ -153,6 +155,7 @@ public class Game {
     }
 
     private void gameLevel() {
+
         levelCounter++;
 
         if (levelCounter > (numberOfHoles * 50)) {
@@ -161,26 +164,19 @@ public class Game {
                 trigger = trigger - 2;
                 if (trigger == 9 || trigger == 5 || trigger == 3) {
                     numberOfHoles++;
-                    System.out.println("Time: " + (System.currentTimeMillis() - time) / 1000 + " | " + "level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
+                    System.out.println("Level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
             } else {
                 if (numberOfHoles != 1) {
                     numberOfHoles--;
-                    System.out.println("Time: " + (System.currentTimeMillis() - time) / 1000 + " | " + "level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
+                    System.out.println("Level/Holes: " + numberOfHoles + " | " + "EmptyLines: " + trigger);
                 }
             }
         }
     }
 
-    /*
-    private void crash(Line line){
-        if(line.getLine()[player.getCol()]){
-            gameLoop = true;
-        }
-    }
-    */
-
     private void crash() {
+
         Iterator<Line> it = lineList.iterator();
         Line line;
 
@@ -195,6 +191,7 @@ public class Game {
                 }
             }
         }
+
     }
 
 }

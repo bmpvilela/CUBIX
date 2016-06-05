@@ -20,7 +20,7 @@ public class Menu {
     public Menu(RepresentableKeyboard keyboard) throws InterruptedException {
 
         this.keyboard = keyboard;
-        sGraphicsMenu = new MenuSgfx(); // instancia o simplegraphics do startscreen
+        sGraphicsMenu = new MenuSgfx();
     }
 
     /**
@@ -34,7 +34,6 @@ public class Menu {
 
         while(keyboard.input() != 32){
             Thread.sleep(5);
-            //decision
         }
 
         sGraphicsMenu.deleteMenu();
@@ -51,5 +50,4 @@ public class Menu {
         Thread.sleep(3000);
         sGraphicsMenu.deleteGameOver();
     }
-
 }

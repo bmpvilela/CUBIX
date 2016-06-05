@@ -11,7 +11,7 @@ public class Line {
     private Position pos;
 
     /**
-     * Creates a new line with the respective cube visibility
+     * Creates a new line with the respective cubes visibilities
      *
      * @param numberOfHoles the number of hidden cubes
      */
@@ -23,7 +23,7 @@ public class Line {
     }
 
     /**
-     * Set all cubes visibility in the line to true
+     * Sets all cubes visibility in the line to true
      */
     private void setLineTrue(){
 
@@ -34,7 +34,7 @@ public class Line {
 
     /**
      * Chooses a random position in the line and hide the cube in that position
-     * It does not hide two followed cubes if the position is in the border
+     * In the loop it will not hide the same cube twice.
      *
      * @param numberOfHoles the number of hidden cubes
      */
@@ -64,7 +64,6 @@ public class Line {
         }
     }
 
-    // get line row to compare with field lines
     /**
      * Gets the line row position
      *
@@ -73,8 +72,6 @@ public class Line {
     public int getLineRow() {
         return pos.getRow();
     }
-
-    // increment line row to make it move down
 
     /**
      * Changes the line row position

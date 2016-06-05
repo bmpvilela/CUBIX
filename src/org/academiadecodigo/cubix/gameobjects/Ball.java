@@ -16,7 +16,7 @@ public class Ball{
     /**
      * Creates a new ball
      *
-     * @param col the initial ball column position
+     * @param col the ball column position
      */
     public Ball(int col){
 
@@ -27,7 +27,8 @@ public class Ball{
 
 
     /**
-     * Sets the visibility of the ball in the screen simply by drawing or deleting is image
+     * Sets the visibility of the ball in the screen
+     * simply by drawing or deleting is image
      *
      * @param visible the visibility of the ball
      */

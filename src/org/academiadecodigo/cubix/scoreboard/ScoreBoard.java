@@ -26,7 +26,8 @@ public class ScoreBoard {
     }
 
     /**
-     * Shows the score number by setting invisible the actual score number position and setting visible the new score number position
+     * Shows the score number by setting invisible the actual score number position
+     * and setting visible the new score number position
      *
      * @param score the score number
      */
@@ -40,7 +41,8 @@ public class ScoreBoard {
 
 
     /**
-     * Shows the level number by setting invisible the actual level number position and setting visible the new score number position
+     * Shows the level number by setting invisible the actual level number position
+     * and setting visible the new score number position
      *
      * @param level the level number
      */

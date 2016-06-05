@@ -22,7 +22,8 @@ public class ScoreLevel {
     }
 
     /**
-     * Sets the visibility of the level number in the screen simply by drawing or deleting is image
+     * Sets the visibility of the level number in the screen
+     * simply by drawing or deleting is image
      *
      * @param visible the visibility of the level number
      */

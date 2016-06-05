@@ -16,12 +16,11 @@ import java.util.LinkedList;
 
 public class Game {
 
-    private Menu menu;
-
     private LinkedList<Line> lineList;
     private int delay = 5;
     private boolean gameLoop;
 
+    private Menu menu;
     private Field board;
     private Player player;
     private ScoreBoard scoreboard;
@@ -63,7 +62,7 @@ public class Game {
 
     /**
      * Starts the game.
-     * Initializes the board, player and score board
+     * Initializes the line list, board, player and score board
      * Loop the game until the player looses
      * When the player looses the game is restarted
      *
@@ -79,15 +78,20 @@ public class Game {
         gameLoop();
 
         menu.gameOver();
+        System.gc();
         board.resetField();
         init();
     }
 
 
     /**
-     * The game will run until the space key is pressed to pause the game. While game is running,
+     * The game will run until the space key is pressed to pause. While game is running,
      * the level and score points are shown in the screen
      *
+     * The game will run in a loop with a master delay. When the counters(delayBall and delayLine),
+     * are equals to the division between the number defined by the programmer and the master delay,
+     * the game objects(ball or lines) will move in different times and speeds.
+     * Then the game reset the counters.
      *
      * @throws InterruptedException
      */
@@ -95,6 +99,7 @@ public class Game {
 
         int delayLine = 0;
         int delayBall = 0;
+
         numberOfHoles = 1;
         score = 0;
         level = 1;
@@ -150,10 +155,18 @@ public class Game {
         setFieldLine(line);
         lineList.add(line);
         newLineCounter = 0;
+
     }
 
     /**
-     * Moves the lines along the board
+     * Iterates the line list and for each line
+     * moves the line along the board.
+     *
+     * If the line is in the last position of
+     * the board it will be removed.
+     *
+     * If not it will clear that line in the board and then
+     * increment the position and show the new line in the board.
      */
     private void moveLines() {
 
@@ -175,9 +188,9 @@ public class Game {
     }
 
     /**
-     * Deletes a line in the board by setting invisible all the cubes in that line
+     * Hide a line in the board by setting invisible all the cubes in that line
      *
-     * @param line the line that will be deleted from the board
+     * @param line the line that will be hidden in the board
      */
     private void clearFieldLine(Line line) {
 
@@ -190,7 +203,7 @@ public class Game {
     }
 
     /**
-     * Shows a line in the board by setting visible the cubes in that line
+     * Shows a line in the board by setting the visibility of the cubes in that line
      *
      * @param line the line that will be showed in the board
      */
@@ -203,7 +216,16 @@ public class Game {
         }
     }
 
-
+    /**
+     * Defines the logic for the spaces between the lines,
+     * by decreasing the trigger value by 2.
+     *
+     * When each time is decreased we evaluate if is equals to 9 or 5 or 3,
+     * and then it will increment the number of holes. If it is 5 or 3 we increment the level too.
+     *
+     * Else it will decrease the number of holes and increase the level.
+     * This happens when the game reaches the lowest trigger value.
+     */
     private void gameLevel() {
 
         levelCounter++;

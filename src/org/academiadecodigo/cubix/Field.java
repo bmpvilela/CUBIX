@@ -9,7 +9,7 @@ import org.academiadecodigo.cubix.simplegfx.FieldSgfx;
 
 public class Field {
 
-    private Cube[][] cubeField = new Cube[15][9]; // array multidimensional (15 linhas, 9 colunas)
+    private Cube[][] cubeField = new Cube[15][9];
     private RepresentableField sGraphicsField;
 
     /**
@@ -23,24 +23,25 @@ public class Field {
     }
 
     /**
-     * Creates the field with 15 rows and 9 columns
+     * Creates a cube for each column in each row.
      */
     private void createField(){
 
-        for (int i = 0; i < cubeField.length; i++){ // i = 15 linhas (row)
-            for (int j = 0; j < cubeField[i].length; j++) { // j = 9 colunas (col)
+        for (int i = 0; i < cubeField.length; i++){
+            for (int j = 0; j < cubeField[i].length; j++){
                 cubeField[i][j] = new Cube(i, j);
             }
         }
     }
 
     /**
-     * Set all rows and columns (the field) invisible
+     *
+     * Set each cube invisible for each column in each row.
      */
     public void resetField(){
 
-        for (int i = 0; i < cubeField.length; i++){ // i = 15 linhas (row)
-            for (int j = 0; j < cubeField[i].length; j++) { // j = 9 colunas (col)
+        for (int i = 0; i < cubeField.length; i++){
+            for (int j = 0; j < cubeField[i].length; j++){
                 cubeField[i][j].setVisible(false);
             }
         }

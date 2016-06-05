@@ -16,8 +16,8 @@ public class Cube {
     /**
      * Creates a new cube
      *
-     * @param row the initial cube row position
-     * @param col the initial cube column position
+     * @param row the cube row position
+     * @param col the cube column position
      */
     public Cube(int row, int col){
 
@@ -29,7 +29,8 @@ public class Cube {
 
 
     /**
-     * Sets the visibility of the cube in the screen simply by drawing or deleting is image
+     * Sets the visibility of the cube in the screen
+     * simply by drawing or deleting is image
      *
      * @param visible the visibility of the ball
      */

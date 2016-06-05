@@ -14,8 +14,8 @@ public class CubeSgfx implements RepresentableCube {
     /**
      * Creates the graphic representation of the cube
      *
-     * @param row initial cube position row
-     * @param col initial cube position column
+     * @param row the cube row position
+     * @param col the cube column position
      */
     public CubeSgfx(int row, int col){
         pic = new Picture("art/" + row + "/" + col + ".png");

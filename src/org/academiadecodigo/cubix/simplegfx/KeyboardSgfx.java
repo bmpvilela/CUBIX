@@ -15,7 +15,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     private int numb = 0;
 
     /**
-     * Creates a new keyboard and assigns it some keys and their respective keyboard events
+     * Creates a new keyboard and assigns it keys and their respective keyboard events
      */
     public KeyboardSgfx(){
 
@@ -33,7 +33,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     }
 
     /**
-     * Creates a new keyboard event when a key is pressed
+     * Creates a new keyboard event for when a key is pressed
      *
      * @param key the key number
      */
@@ -46,7 +46,7 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
     }
 
     /**
-     * Creates a new keyboard event when a key is released
+     * Creates a new keyboard event for when a key is released
      *
      * @param key the key number
      */

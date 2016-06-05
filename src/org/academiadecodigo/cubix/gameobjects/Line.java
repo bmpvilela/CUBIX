@@ -23,7 +23,7 @@ public class Line {
     }
 
     /**
-     * Set all cubs visibility in the line to true
+     * Set all cubes visibility in the line to true
      */
     private void setLineTrue(){
 

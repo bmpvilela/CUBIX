@@ -24,7 +24,7 @@ public class Menu {
     }
 
     /**
-     * Draws a menu image, when the space key is pressed the image is deleted
+     * Draws a menu image, when the space key is pressed the image is removed
      *
      * @throws InterruptedException
      */

@@ -21,17 +21,16 @@ public class Game {
     private LinkedList<Line> lineList;
     private int delay = 5;
     private boolean gameLoop;
-    private long time;
 
     private Field board;
     private Player player;
     private ScoreBoard scoreboard;
 
-    private int numberOfHoles = 1;
+    private int numberOfHoles;
     private int newLineCounter;
-    private int trigger = 15; //number of loops to create a new line
+    private int trigger; //number of loops to create a new line
     private int levelCounter;
-    private int level = 1;
+    private int level;
     private int score;
 
     private RepresentableKeyboard keyboard;
@@ -100,7 +99,10 @@ public class Game {
 
         int delayLine = 0;
         int delayBall = 0;
+        numberOfHoles = 1;
         score = 0;
+        level = 1;
+        trigger = 15;
         gameLoop = false;
 
         while(!gameLoop){

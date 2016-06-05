@@ -76,11 +76,7 @@ public class Game {
         player = new Player(keyboard);
         scoreboard = new ScoreBoard();
 
-        try {
-            gameLoop();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        gameLoop();
 
         menu.gameOver();
         board.resetField();
@@ -112,7 +108,10 @@ public class Game {
 
             Thread.sleep(delay);
 
-            if(keyboard.input() == 32) pauseControl = !pauseControl;
+            if(keyboard.input() == 32) {
+                pauseControl = !pauseControl;
+                Thread.sleep(500);
+            }
 
             if (!pauseControl){
                 if(60/delay == delayBall){

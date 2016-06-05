@@ -74,11 +74,11 @@ public class Game {
         board = new Field();
         player = new Player(keyboard);
         scoreboard = new ScoreBoard();
+        System.gc();
 
         gameLoop();
 
         menu.gameOver();
-        System.gc();
         board.resetField();
         init();
     }

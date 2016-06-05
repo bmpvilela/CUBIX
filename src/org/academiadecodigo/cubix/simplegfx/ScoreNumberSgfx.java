@@ -16,7 +16,7 @@ public class ScoreNumberSgfx implements RepresentableScoreNumber{
      * @param score the score number
      */
     public ScoreNumberSgfx(int score){
-        pic = new Picture("TEMPLATES/score/" + score + ".png");
+        pic = new Picture("art/score/" + score + ".png");
     }
 
     @Override

@@ -18,7 +18,7 @@ public class CubeSgfx implements RepresentableCube {
      * @param col initial cube position column
      */
     public CubeSgfx(int row, int col){
-        pic = new Picture("TEMPLATES/" + row + "/" + col + ".png");
+        pic = new Picture("art/" + row + "/" + col + ".png");
     }
 
     @Override

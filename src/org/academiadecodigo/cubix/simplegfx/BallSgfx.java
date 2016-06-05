@@ -17,7 +17,7 @@ public class BallSgfx implements RepresentableBall {
      * @param col initial ball position
      */
     public BallSgfx(int col){
-        pic = new Picture("TEMPLATES/ball/" + col + ".png");
+        pic = new Picture("art/ball/" + col + ".png");
     }
 
 

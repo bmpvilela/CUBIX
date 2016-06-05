@@ -19,7 +19,7 @@ public class MenuSgfx implements RepresentableMenu {
     @Override
     public void drawGameOver() {
 
-        picGameOver = new Picture("TEMPLATES/GameOver.png");
+        picGameOver = new Picture("art/GameOver.png");
         picGameOver.draw();
     }
 
@@ -31,7 +31,7 @@ public class MenuSgfx implements RepresentableMenu {
     @Override
     public void drawMenu() {
 
-        picMenu = new Picture("TEMPLATES/SpaceToStart.png");
+        picMenu = new Picture("art/SpaceToStart.png");
         picMenu.draw();
     }
 }

@@ -10,7 +10,7 @@ public class FieldSgfx implements RepresentableField {
 
     @Override
     public void init() {
-        Picture pic = new Picture("TEMPLATES/Board.png");
+        Picture pic = new Picture("art/Board.png");
         pic.draw();
 
     }

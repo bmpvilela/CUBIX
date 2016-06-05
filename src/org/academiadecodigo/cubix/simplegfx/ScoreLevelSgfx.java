@@ -16,7 +16,7 @@ public class ScoreLevelSgfx implements RepresentableScoreLevel{
      * @param level the level number
      */
     public ScoreLevelSgfx(int level){
-        pic = new Picture("TEMPLATES/level/" + level + ".png");
+        pic = new Picture("art/level/" + level + ".png");
     }
 
     @Override

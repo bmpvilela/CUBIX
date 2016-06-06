@@ -1,7 +1,7 @@
 package org.academiadecodigo.cubix.simplegfx;
 
 import org.academiadecodigo.cubix.gameobjects.RepresentableBall;
-import org.academiadecodigo.simplegraphics.graphics.Picture;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
  * Created by codecadet on 23/05/16.
@@ -16,8 +16,8 @@ public class BallSgfx implements RepresentableBall {
      *
      * @param col the ball position
      */
-    public BallSgfx(int col){
-        pic = new Picture("art/ball/" + col + ".png");
+    public BallSgfx(int col) {
+        pic = new Picture(0, 0, "art/ball/" + col + ".png");
     }
 
 

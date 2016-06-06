@@ -1,12 +1,12 @@
 package org.academiadecodigo.cubix.simplegfx;
 
 import org.academiadecodigo.cubix.scoreboard.RepresentableScoreNumber;
-import org.academiadecodigo.simplegraphics.graphics.Picture;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
  * Created by codecadet on 04/06/16.
  */
-public class ScoreNumberSgfx implements RepresentableScoreNumber{
+public class ScoreNumberSgfx implements RepresentableScoreNumber {
     private Picture pic;
 
 
@@ -15,8 +15,8 @@ public class ScoreNumberSgfx implements RepresentableScoreNumber{
      *
      * @param score the score number
      */
-    public ScoreNumberSgfx(int score){
-        pic = new Picture("art/score/" + score + ".png");
+    public ScoreNumberSgfx(int score) {
+        pic = new Picture(0, 0, "art/score/" + score + ".png");
     }
 
     @Override

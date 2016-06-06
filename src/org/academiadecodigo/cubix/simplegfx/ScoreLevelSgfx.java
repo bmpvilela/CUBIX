@@ -1,12 +1,12 @@
 package org.academiadecodigo.cubix.simplegfx;
 
 import org.academiadecodigo.cubix.scoreboard.RepresentableScoreLevel;
-import org.academiadecodigo.simplegraphics.graphics.Picture;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
  * Created by codecadet on 04/06/16.
  */
-public class ScoreLevelSgfx implements RepresentableScoreLevel{
+public class ScoreLevelSgfx implements RepresentableScoreLevel {
 
     private Picture pic;
 
@@ -15,8 +15,8 @@ public class ScoreLevelSgfx implements RepresentableScoreLevel{
      *
      * @param level the level number
      */
-    public ScoreLevelSgfx(int level){
-        pic = new Picture("art/level/" + level + ".png");
+    public ScoreLevelSgfx(int level) {
+        pic = new Picture(0, 0, "art/level/" + level + ".png");
     }
 
     @Override

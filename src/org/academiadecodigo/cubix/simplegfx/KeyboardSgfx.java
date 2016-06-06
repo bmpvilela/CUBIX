@@ -26,10 +26,6 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
         createReleaseEvent(KeyboardEvent.KEY_RIGHT);
         createPressEvent(KeyboardEvent.KEY_SPACE);
         createReleaseEvent(KeyboardEvent.KEY_SPACE);
-        createPressEvent(KeyboardEvent.KEY_UP);
-        createReleaseEvent(KeyboardEvent.KEY_UP);
-        createPressEvent(KeyboardEvent.KEY_DOWN);
-        createReleaseEvent(KeyboardEvent.KEY_DOWN);
     }
 
     /**
@@ -78,14 +74,6 @@ public class KeyboardSgfx implements KeyboardHandler,RepresentableKeyboard{
 
             case KeyboardEvent.KEY_SPACE:
                 numb = 32;
-                break;
-
-            case KeyboardEvent.KEY_UP:
-                numb = 38;
-                break;
-
-            case KeyboardEvent.KEY_DOWN:
-                numb = 40;
                 break;
         }
     }

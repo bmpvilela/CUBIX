@@ -1,7 +1,7 @@
 package org.academiadecodigo.cubix.simplegfx;
 
 import org.academiadecodigo.cubix.gameobjects.cube.RepresentableCube;
-import org.academiadecodigo.simplegraphics.graphics.Picture;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
  * Created by codecadet on 23/05/16.
@@ -17,8 +17,8 @@ public class CubeSgfx implements RepresentableCube {
      * @param row the cube row position
      * @param col the cube column position
      */
-    public CubeSgfx(int row, int col){
-        pic = new Picture("art/" + row + "/" + col + ".png");
+    public CubeSgfx(int row, int col) {
+        pic = new Picture(0, 0, "art/" + row + "/" + col + ".png");
     }
 
     @Override

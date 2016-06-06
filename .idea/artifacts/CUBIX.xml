@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CUBIX">
+    <output-path>$PROJECT_DIR$/out/artifacts/CUBIX</output-path>
+    <root id="archive" name="CUBIX.jar">
+      <element id="module-output" name="CUBIX" />
+      <element id="library" level="project" name="simplegraphics" />
+      <element id="dir-copy" path="$PROJECT_DIR$/art" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

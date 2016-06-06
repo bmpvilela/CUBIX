@@ -1,7 +1,7 @@
 package org.academiadecodigo.cubix.simplegfx;
 
 import org.academiadecodigo.cubix.menu.RepresentableMenu;
-import org.academiadecodigo.simplegraphics.graphics.Picture;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 /**
  * Created by codecadet on 03/06/16.
@@ -19,7 +19,7 @@ public class MenuSgfx implements RepresentableMenu {
     @Override
     public void drawGameOver() {
 
-        picGameOver = new Picture("art/GameOver.png");
+        picGameOver = new Picture(0, 0, "art/GameOver.png");
         picGameOver.draw();
     }
 
@@ -31,7 +31,7 @@ public class MenuSgfx implements RepresentableMenu {
     @Override
     public void drawMenu() {
 
-        picMenu = new Picture("art/SpaceToStart.png");
+        picMenu = new Picture(0, 0, "art/SpaceToStart.png");
         picMenu.draw();
     }
 }
